@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Admin</title>
+		<meta name="viewport" content="width=1200, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:500,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	    <script src="js/arrow_up.js"></script>	
+	    <script src="js/slider.js"></script>
+	    <script src="js/page_change.js"></script>
+	    <script src="js/nav_menu.js"></script>
+	    <script src="js/popup.js"></script>
+	    <script src="js/input.js"></script>
+
+
+	</head>
+	<body>
+		<header>
+			<div id="admin_header" class="admin_header clearfix">
+				<div class="left_part_header">
+					<input type="checkbox" id="menuToggle">
+					<label for="menuToggle" class="menu-icon">
+						&#9776;
+					</label>
+					<h1 class="company_name">
+						<a href="index.html">
+							company name
+						</a>
+					</h1>
+				</div><!--end of left part header-->
+
+				<div class="right_part_header">
+					<span>
+						<i class="fa fa-external-link"></i>
+					</span>
+					<span class="go_to">
+						<a href="#">
+							Перейти на www.web.com
+						</a>
+					</span>
+					<span>	
+						<i class="fa fa-user"></i>
+					</span>
+					<div class="hi dropdown clearfix">
+						<a href="#" class="clearfix dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							Привет, admin_name
+							<span>
+								<i class="fa fa-caret-down"></i>
+							</span>
+						</a>
+						<ul class="to_log_out dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li>
+								<a href="login.html" id="login">
+									<span>
+										<i class="fa fa-sign-out"></i>
+									</span>
+									<span class="log_out">
+										Выйти
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div><!--end of Right part header-->	
+			</div><!--end of Header-->
+		</header>
+	
+		<!--NAVIGATION-->
+
+		<nav class="admin_menu">
+			<div class="menu_inner">
+				<ul>
+					<li class="first_li active">
+						<a href="#">
+							<img src="image/Exterior-100_sm.png" alt="main page" class="nav_picture">
+							главная
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="image/Shopping-Cart-100_sm.png" alt="to add product" class="nav_picture">
+							добавить товар
+						</a>
+					</li>
+					<li class="underlined_li clearfix nav_bottom_padding">
+						<a href="#">
+							<img src="image/Megaphone-100_sm.png" alt="to add news" class="nav_picture nav_picture_news">
+							добавить новость
+						</a>
+					</li>
+					<li class="nav_top_padding">
+						<a href="#">
+							<img src="image/Open-Folder-100_sm.png" alt="subcategories" class="nav_picture nav_picture_subcat">
+							подкатегории
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="image/Dossier-100_sm.png" alt="catalog" class="nav_picture nav_picture_catalog">
+							каталог
+						</a>
+					</li>
+					<li class="clearfix nav_bottom_padding">
+						<a href="#">
+							<img src="image/View-Details-100_sm.png" alt="list of news" class="nav_picture nav_picture_list">
+							список новостей
+						</a>
+					</li>
+					<li class="two_lines_li clearfix nav_top_padding nav_bottom_padding">
+						<a href="#">
+							<img src="image/Conference-100_sm.png" alt="manufacturers" class="nav_picture nav_picture_manuf">
+							производители
+						</a>
+					</li>
+				</ul>
+			</div><!--end of Menu_inner-->
+		</nav>
+
+		<main>
+			<div class="all_elements_inner">
+					<h1 class="all_elements_title">
+						Элементы и их состояния
+					</h1>
+				<div class="row row_all_elements clearfix">
+					<div class="admin_inputs clearfix">
+						<h2 class="header_with_left_margin">
+							Inputs
+						</h2>
+						<div class="admin_active_div first_input">
+							<input class="admin_active_input" />
+						</div>
+						<div class="admin_active_div first_input">
+							<input class="admin_active_input" placeholder="Disabled" disabled/>
+						</div>
+						<div class="admin_alert_div">
+							<input class="admin_alert_input" placeholder="Alert"/>
+						</div>
+					</div><!--end of Inputs-->
+				</div><!--end of row-->
+				
+				<div class="row row_all_elements">
+					<div class="admin_progress_sliders clearfix col-lg-4">
+						<h2 class="header_with_left_margin">
+							Progressbars and Sliders
+						</h2>
+						<div class="progress">
+	  						<div class="progress-bar" role="progressbar" >
+							</div>
+						</div>
+						<div id="slider-range-min">
+						</div>
+					</div><!--end of progress_sliders-->
+
+					<div class="admin_navigation clearfix col-lg-8">
+						<h2>
+							Navigation
+						</h2>
+						<div class="admin_display_types">
+							<button class="first_type">
+								<i class="fa fa-align-justify"></i>
+							</button>
+							<button class="second_type">
+								<i class="fa fa-list"></i>
+							</button>
+							<button class="third_type">
+							</button>
+							<button class="fourth_type">
+								<i class="fa fa-th"></i>
+							</button>
+						</div>
+						<div class="admin_all_messages">
+							<div class="prev_page">
+								<i class="fa fa-caret-left"></i>
+							</div>
+							<div class="text_all_messages">
+								<span>
+									All messages
+								</span>
+							</div>
+							<div class="next_page">
+								<i class="fa fa-caret-right"></i>
+							</div>
+						</div>
+						  <ul class="pagination admin_page_change">
+						    <li>
+						      <a href="#" class="prev_page1" aria-label="Previous">
+						        <span aria-hidden="true"><i class="fa fa-caret-left"></i></span>
+						      </a>
+						    </li>
+						    <span class="admin_pages">
+							    <li class="one_page">
+							    	<a class="pages_numbers always_visible_number" href="#">
+							   			1
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers always_visible_number" href="#">
+							    		2
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers not_always_visible_number" href="#">
+							    		3
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers not_always_visible_number" href="#">
+							   			4
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers not_always_visible_number" href="#">
+							    		5
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers not_always_visible_number" href="#">
+							    		6
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers not_always_visible_number" href="#">
+							    		7
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers always_visible_number" href="#">
+							    		8
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers always_visible_number" href="#">
+							    		9
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							    		10
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							   			11
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							    		12
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							    		13
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							    		14
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							    		15
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers two_numbers_page not_always_visible_number" href="#">
+							    		16
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers always_visible_number two_numbers_page" href="#">
+							    		17
+							    	</a>
+							    </li>
+							    <li class="one_page">
+							    	<a class="pages_numbers always_visible_number two_numbers_page" href="#">
+							    		18
+							    	</a>
+							    </li>
+							</span><!--end of Pages-->
+						    <li>
+						      <a href="#" class="next_page1 " aria-label="Next">
+						        <span aria-hidden="true"><i class="fa fa-caret-right"></i></span>
+						      </a>
+						    </li>
+						  </ul>
+					</div><!--end of Navigation-->
+				</div><!--end of row-->
+
+				<div class="row row_all_elements">
+					<div class="admin_checkboxes clearfix col-lg-3">
+						<h2 class="header_with_left_margin">
+							Checkboxes
+						</h2>
+					    <div class="squared">
+					        <input type="checkbox" value="a1" id="squared" name="check"/>
+					        <label for="squared">
+					        </label>
+					        <p class="input_text">
+					        	Item 1
+					        </p>
+					        <input type="checkbox" id="squared2"/>
+					        <label class="label2" for="squared2">
+					        </label>
+					        <p class="input_text">
+					        	Item 2
+					        </p>
+					        <input type="checkbox" id="squared3"/>
+					        <label class="label3" for="squared3">
+					        </label>
+					        <p class="input_text">
+					        	Item 3
+					        </p>
+					        <input type="checkbox" id="squared4"/>
+					        <label class="label4" for="squared4">
+					        </label>
+					        <p class="input_text">
+					       		Item 4
+					        </p>
+					        	<input type="checkbox" id="squared5"/>
+					        	<label class="label5" for="squared5">
+					        	</label>
+					        <p class="input_text">
+					        	Item 5
+					        </p>
+					    </div><!--end of Squared-->
+					</div><!--end of Checkboxes-->
+
+					<div class="admin_radiobox">
+						<h2>
+							Radioboxes
+						</h2>
+						<label>
+						<input type="radio" name="radioGroup"/>
+						<span>
+						    Option 1
+						</span>
+						</label>
+						<p></p>	
+						<label>
+						<input type="radio" name="radioGroup"/>
+						<span>
+						   	Option 2
+						</span>
+						</label>
+						<p></p>
+						<label>
+						<input type="radio" name="radioGroup"/>
+						<span>
+						   	Option 3
+						</span>
+						</label>
+						<p></p>
+						<label>
+						<input type="radio" name="radioGroup"/>
+						<span>
+						    Option 4
+						</span>
+						</label>
+						<p></p>
+						<label>
+						<input type="radio" name="radioGroup"/>
+						<span>
+						    Option 5
+						</span>
+						</label>
+					</div><!--end of Radiobox-->
+
+					<div class="switch col-lg-3">
+						<h2>
+							Toggles
+						</h2>
+						<div class="admin_round_onoffswitch">
+						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch">
+						        <span class="onoffswitch-inner">
+						        </span>
+						        <span class="onoffswitch-switch">
+						        </span>
+						    </label>
+						</div>
+						<div class="admin_square_onoffswitch">
+						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch2">
+						        <span class="onoffswitch-inner">
+						        </span>
+						        <span class="onoffswitch-switch">
+						        </span>
+						    </label>
+						</div>
+					</div><!--end of Switch-->
+				</div><!--end of row-->
+
+				<div class="row row_all_elements">
+					<div class="admin_tooltips col-lg-3">
+						<h2 class="header_with_left_margin">
+							Tooltips
+						</h2>
+						<div class="admin_tooltip1">
+							<p class="text">
+								Tooltip under the text
+							</p>
+						</div>
+						<div>
+							<div class="admin_tooltip2">
+								<p class="text">
+									Here is the sample of talltooltip that contains three lines or more. More.
+								</p>
+							</div>
+						</div>
+					</div><!--end of Tooltips-->
+					<div class="admin_text_boxes col-lg-3">
+						<h2>
+							Text Box
+						</h2>	
+						<div class="text_box">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida a felis a lacinia. Pellentesque vel imperdiet urna. Vestibulum a ipsum ultrices, hendrerit est a, porta purus. Morbi sed faucibus dolor.
+								<a href="#">
+									visual marker.
+								</a>
+							</p>
+							<p>
+								Maecenas gravida a felis a lacinia. Pellentesque vel imperdiet urna. Vestibulum a ipsum ultrices, hendrerit est a, porta purus
+							</p>
+						</div><!--end of Text_box-->
+					</div><!--end of Text_boxes-->
+					<div class="headers col-lg-3">
+						<h2>
+							Headers
+						</h2>	
+						<h1>
+							Header 1
+						</h1>
+						<h2>
+							Header 2
+						</h2>
+						<h3>
+							Header 3
+						</h3>
+						<h4>
+							Header 4
+						</h4>
+						<h5>
+							Header 5
+						</h5>
+					</div>
+				</div><!--end of row-->
+
+				<div class="row row_all_elements">
+					<div class="admin_buttons">
+						<h2 class="header_with_left_margin">
+							Buttons
+						</h2>
+						<a class="button">
+							Warm Button
+						</a>
+					</div>
+				</div><!--end of row-->
+			</div><!--end of All_elements_inner-->
+
+			<!--SCROLL UP-->
+			<div class="arrow">
+				<a id="scrollUp" href="#admin_header" class="back-to-top" style="display: inline;">
+					<i class="fa fa-angle-up fa-2x"></i>
+				</a>
+			</div>
+		</main>
+
+		<footer class="admin_footer">
+			<div class="footer_inner clearfix footer_all_elem">
+				<a href="http://www.dev.bzzz.biz.ua/">
+					made by
+					<img class="bzzz_logo" src="image/bzzz_logo.png" alt="bzzz! web development studio">
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>

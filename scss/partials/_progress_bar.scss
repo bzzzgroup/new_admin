@@ -1,0 +1,12 @@
+.progress {
+    display: inline-block;
+    margin: 10px 0px 50px 30px;
+    border-radius: 10px;
+    width: 220px;
+    height: 12px;
+    background-color: $progress_bar_backgr;
+    .progress-bar {
+        width: 60%;
+        background-color: $main_color;
+    }
+}

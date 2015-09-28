@@ -1,0 +1,165 @@
+main {
+	width: 100%;
+	background: $background_color;
+	z-index: -3;
+	position: absolute;
+	.colors_inner {
+		color: $main_part_title;
+		width: 1200px;
+		margin: auto;
+		.row_colors {
+			width: 830px;
+			margin: 0px 0px 15px 320px;
+		}
+		.main_colors {
+			float: left;
+			margin: 0px 0px 200px 330px;
+			width: 160px;
+		}
+		.fonts {
+			float: left;
+			margin-left: 40px;
+			width: 60px;
+			.font_name {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.font_color {
+				font-size: 14px;
+				margin-top: 13px;
+			}
+		}
+		.additional {
+			float: left;
+			margin-left: 55px;
+			width: 150px;
+			.addit_footer {
+				font-size: 14px;
+				text-transform: uppercase;
+				margin: 23px 0px 10px 0px;
+			}
+		}
+		.backgr {
+			width: 100px;
+			float: left;
+			margin-left: 30px;
+			.backgr_title {
+				font-size: 15px;
+				text-transform: uppercase;
+				margin: 38px 0px 14px 0px;
+			}
+			.backgr_color1 {
+				color: #bdc2c5;
+				margin-top: 13px;
+			}
+			.backgr_color2 {
+				color: #bdc2c5;
+				margin-top: 5px;
+			}
+		}
+	}
+}
+.examples_title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.turquoise {
+	background: #1abc9c;
+}
+.green_sea {
+	background: #16a085;
+}
+.emerland {
+	background: #2ecc71;
+}
+.nephritis {
+	background: #27ae60;
+}
+.peret_river {
+	background: #3498db;
+}
+.belize_hole {
+	background: #2980b9;
+}
+.amethyst {
+	background: #9b59b6;
+}
+.wisteria {
+	background: #8e44ad;
+}
+.wetasphalt {
+	background: #34495e;
+}
+.midnight_blue {
+	background: #2c3e50;
+}
+.sun_flowers {
+	background: #e5c332;
+}
+.orange {
+	background: #de9b2b;
+}
+.carrot {
+	background: #ce7d2f;
+}
+.pumpkin {
+	background: #b95514;
+}
+.alizarin {
+	background: #e74c3c;
+}
+.pomegranate {
+	background: #a63c30;
+}
+.clouds {
+	background: #ecf0f1;
+	color: #bdc2c5;
+	.top_text {
+		color: #bdc2c5 !important;
+	}
+}
+.silver {
+	background: #bdc3c7;
+}
+.concrete {
+	background: #95a5a6;
+}
+.asbestos {
+	background: #7f8c8d;
+}
+.block_two_colors {
+	color: $header_and_buttons_text;
+	display: inline-block;
+	width: 150px;
+	height: 120px;
+	font-size: 14px;
+	margin-left: 10px;
+	text-transform: uppercase;
+	.top_color {
+		height: 60px;
+		.top_text {
+			margin: 15px 0px 5px 15px;
+			color: $header_and_buttons_text;
+		}
+		.bottom_text {
+			margin-left: 15px;
+		}
+	}
+	.bottom_color {
+		height: 60px;
+		.top_text {
+			margin: 15px 0px 3px 15px;
+			color: $header_and_buttons_text;
+		}
+		.bottom_text {
+			margin-left: 15px;
+		}
+	}
+}
+.themes_titles {
+    margin-left: 330px;
+}
+.one_theme {
+	margin-left: 0;
+}

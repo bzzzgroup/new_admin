@@ -1,0 +1,210 @@
+.admin_navigation {  
+    @include user_select();              
+    a {
+        text-decoration: none;
+    }
+    .navig_title {
+        margin-left: 30px;
+    }
+    .admin_display_types {
+        display: inline-block;
+        float: left;
+        position: relative;
+        button {
+            background: $main_color;
+            border: 1px solid $main_color;
+            width: 45px;
+            height: 40px;
+            outline: none;
+            font-size: 17px;
+            color: $header_and_buttons_text;
+            &:hover {
+                background: $more_dark_main_color;
+                border: 1px solid $more_dark_main_color;
+            }
+        } 
+        .first_type {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px; 
+            position: relative;
+        }
+        .second_type {
+            position: relative;
+            right: 4px;
+        }
+        .third_type {
+            background: $main_color url('../image/display_type.png') no-repeat center center;
+            position: absolute;
+            right: -41px;
+            bottom: 0px;
+            &:hover {
+                background: $more_dark_main_color url('../image/display_type.png') no-repeat center center;
+            }
+            .third_type_img {
+                width: 22px;
+                height: 20px;
+                position: relative;
+                top: 1px;
+            }
+        }
+        .fourth_type {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            position: absolute;
+            right: -86px;
+            bottom: 0px;
+        }
+    }
+    .admin_all_messages {
+        display: inline-block;
+        float: left;
+        margin: -1px 0px 30px 130px;
+        position: relative;
+        top: 2px;
+        div {
+            display: inline-block;
+            float: left;
+            background: $main_color;
+            border: 1px solid $main_color;
+            color: $header_and_buttons_text;
+            font-size: 16px;
+            height: 40px;
+        }
+        .fa-caret-left {
+            font-size: 28px;
+            position: relative;
+            left: 14px;
+            top: 4px;
+        }
+        .fa-caret-right {
+            font-size: 28px;
+            position: relative;
+            left: 17px;
+            top: 4px;
+        }
+        .prev_page {
+            width: 45px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-right: 1px solid $more_dark_main_color; 
+            &:hover {
+                background: $more_dark_main_color;
+                border: 1px solid $more_dark_main_color;
+            }
+        }
+        .text_all_messages {
+            width: 112px;
+            span {
+                position: relative;
+                top: 11px;
+                left: 8px;
+            }
+        }
+        .next_page {
+            width: 45px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-left: 1px solid $more_dark_main_color; 
+            &:hover {
+                background: $more_dark_main_color;
+                border: 1px solid $more_dark_main_color;
+            }   
+        }
+    }
+    .admin_page_change {
+        margin-top: 30px;
+        clear: both;
+        .prev_page1 {
+            float: left;
+            width: 45px;
+            height: 40px;
+            background: $progress_bar_backgr;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px; 
+            &:hover {
+                background: $main_color;
+                border: 1px solid $more_dark_main_color;
+            }
+            .fa-caret-left {
+                font-size: 28px;
+                position: relative;
+                left: 3px;
+                top: 0px;
+                color: $header_and_buttons_text;
+            }
+        }
+        .next_page1 {
+            float: left;
+            width: 45px;
+            height: 40px;
+            background: $progress_bar_backgr;
+            width: 45px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            &:hover {
+                background: $main_color;
+                border: 1px solid $more_dark_main_color;
+            }   
+            .fa-caret-right {
+                font-size: 28px;
+                position: relative;
+                left: 7px;
+                top: 0px;
+                color: $header_and_buttons_text;
+            }
+        }
+        .admin_pages {
+            float: left;
+            width: 530px;
+            height: 40px;
+            background: $progress_bar_backgr;
+            margin: 0px 3px;
+            .one_page {
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                font-size: 12px;
+                background: $header_and_buttons_text;
+                border: 1px solid $header_and_buttons_text;
+                color: $header_and_buttons_text;
+                border-radius: 50%;
+                margin: 12px 0px 0px 8px;
+                text-align: center;
+                a {
+                    position: relative;
+                    top: 2px;
+                }
+                &:hover {
+                    background: $main_color;
+                    color: $header_and_buttons_text;
+                    width: 23px;
+                    height: 23px;
+                    border: 1px solid $main_color;
+                    margin: 12px 0px 0px 2px;
+                    bottom: 2px;
+                    left: 3px;
+                    a {
+                        top: 4px;
+                        color: #fff !important;
+                    }
+                } 
+            }
+            .always_visible_number {
+                color: $progress_bar_backgr;
+                position: relative !important;
+                bottom: 3px;
+            } 
+            .not_always_visible_number {
+                color: #fff;
+            }  
+        }
+    }
+}
+.page_clicked {
+    color: red;
+}
+.two_numbers_page {
+    right: 1px;
+}

@@ -1,0 +1,39 @@
+.admin_inputs {
+    input {
+        float: left;
+        border-radius: 6px;
+        padding: 10px 0px 7px 10px;
+        width: 230px;
+        font-size: 14px;
+        margin-left: 15px;
+        outline: none;
+    }
+    .admin_active_div {
+        @include input_placeholder(#bdc3c7);
+        .admin_active_input {
+            border: 2px solid #d5d9db;
+            background: #f6f8f8;
+            color: $to_add_item_text;
+            &:focus {
+                @include input_placeholder(#3d4a5d);
+                border: 2px solid #3498db;
+                background: #fff;
+                color: #3d4a5d;
+            }
+            &:disabled {
+                border: 2px solid $progress_bar_backgr;
+                background: $progress_bar_backgr;
+            }
+        }
+    }
+    .admin_alert_div {
+        @include input_placeholder($alert_input_color);
+        .admin_alert_input {
+            border: 2px solid $alert_input_color;
+            background: #fff;
+        }
+    }
+}
+.first_input {
+    margin-left: 15px;
+}

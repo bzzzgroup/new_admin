@@ -1,0 +1,7 @@
+@mixin rotate($degree) {    
+    -moz-transform: rotate($degree); /* Для Firefox */
+    -ms-transform: rotate($degree); /* Для IE */
+    -webkit-transform: rotate($degree); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate($degree); /* Для Opera */
+    transform: rotate($degree);
+}

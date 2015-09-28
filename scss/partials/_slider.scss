@@ -1,0 +1,28 @@
+.ui-corner-all {
+    border-radius: 10px;
+}
+#slider-range-min {
+    margin: 10px 0px 0px 40px;
+    background-color: $progress_bar_backgr;
+    width: 220px;
+    height: 12px;
+    margin-bottom: 20px;
+}
+.ui-widget-header {
+    border: 1px solid $main_color !important;
+    background: $main_color;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid $more_dark_main_color;
+    background: $more_dark_main_color;
+    outline: none;
+    width: 18px;
+    height: 18px;
+}
+.ui-widget-content {
+    border: 1px solid $progress_bar_backgr;
+    background: $progress_bar_backgr;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -4px;
+}

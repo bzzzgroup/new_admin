@@ -1,0 +1,47 @@
+h1 {
+    color: $main_part_title;
+    font-size: 32px;
+    margin: 40px 0px;
+    font-weight: 100;
+}
+h2 {
+    color: $main_part_title;
+    font-size: 26px;
+    margin-bottom: 30px; 
+    font-style: normal;
+    font-weight: 500;
+}
+h3 {
+    color: $main_part_title;
+    font-size: 24px;
+    font-weight: bold;
+}
+h4 {
+    color: $main_part_title;
+    font-size: 18px;
+    font-weight: bold;
+}
+h5 {
+    color: $main_part_title;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.header_with_left_margin {
+    margin-left: 30px;
+}
+.headers {
+    margin-left: 120px;
+    h1 {
+        margin: 30px 0px 20px 0px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    h3, h4 {
+        margin-bottom: 18px;
+    }
+}
+.h1_on_index_page {
+    margin-left: 30px;
+}

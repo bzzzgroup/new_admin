@@ -1,0 +1,113 @@
+header	{
+	@include box-shadow (0px, 7px, 9px, 0px, $shadow);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: $main_color;
+	z-index: 7;
+	color: $header_and_buttons_text;
+	.left_part_header {
+		float: left;
+		label {
+			font-size: 24px;
+			float: left;
+			margin: 30px 50px 25px 30px;
+		}
+		#menuToggle {
+			display: none;
+		}
+		.company_name {
+			float: left;
+			font-size: 30px;
+			margin: 25px 0px 20px 0px;
+			color: $header_and_buttons_text;
+			font-weight: 100;
+			a,
+			&:hover,
+			&:active {
+				color: $header_and_buttons_text !important;
+				text-decoration: none;
+			}
+		}
+	}
+	.right_part_header {
+		font-size: 14px;
+		font-style: normal !important;
+		font-weight: 500 !important;
+		float: right;
+		a {
+			color: #fff;
+			&:hover {
+				text-decoration: underline;
+				color: #fff;
+			}
+		}
+		.fa-external-link {
+			font-size: 24px;
+			margin: 26px 20px 0px 0px;
+			float: left;
+		}
+		.go_to {
+			margin: 31px 30px 0px 0px;
+			float: left;
+		}
+		.fa-user {
+			font-size: 24px;
+			margin: 26px 20px 0px 0px;
+			float: left;
+		}
+		.hi {
+			margin: 31px 10px 0px 0px;
+			float: left;
+			position: relative;
+			.to_log_out {
+				z-index: 20;
+				position: absolute;
+				top: 44px;
+				left: -84px;
+				background: $header_and_buttons_text;
+				width: 280px;
+				height: 55px;
+				border: 1px solid $header_and_buttons_text;
+				border-radius: 5px;
+				@include box-shadow(0px, 7px, 9px, 0px, $shadow);
+				&:after {
+					content: "";
+					position: absolute;
+					top: -8px;
+					right: 130px;
+					background: $header_and_buttons_text;
+					width: 20px;
+					height: 20px;
+					@include rotate(45deg);
+				}
+				.fa-sign-out {
+					color: $main_part_title;
+					float: left;
+					font-size: 23px;
+					margin: 12px 18px 3px 48px;
+				}
+				.log_out {
+					color: $main_part_title;
+					float: left;
+					margin-top: 15px; 
+				}
+			}
+			.fa-caret-down {
+				margin: 0px 30px 0px 10px;
+				position: relative;
+				bottom: 4px;
+				font-size: 24px;
+				float: right;
+			}
+			.menu-icon {
+				padding: 31px 40px 15px 25px;
+				color: $header_and_buttons_text;
+				font-size: 22px;
+				cursor: pointer;
+				float: left;
+			}
+		}
+	}
+}
+

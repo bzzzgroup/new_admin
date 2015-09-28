@@ -1,0 +1,85 @@
+nav {
+	text-align: center;
+	width: 308px;
+	height: 100% !important;
+ 	a {
+ 		display: block;
+ 		padding: 5px 0px;
+		&:hover {
+			background: $background_color;
+		}
+ 	}
+}
+.admin_menu {
+	@include box-shadow(7px, 2px, 9px, 0px, $shadow);
+	position: absolute;
+	background: #fff;
+	left: -320px;
+	top: 80px;
+	z-index: 5;
+	height: 100%;
+	@include transition(all, 0s, ease-in-out, 0s);
+	.underlined_li {
+		border-bottom: 2px solid $nav_lines;
+	}
+	li {
+		clear: both;
+	}
+	.first_li {
+		margin-top: 20px;
+	}
+	.nav_line1 {
+		color: $nav_lines;
+		background-color: $nav_lines;
+		height: 2px;
+		width: 250px;
+		margin: 0px 0px 0px 24px;
+	}
+	.nav_line2 {
+		@extend .nav_line1; 
+		height: 1px;
+	}
+	a {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		text-align: left;
+		color: $navbar_text;
+		padding: 15px 30px;
+	}
+	.nav_picture {
+		width: 25px;
+		margin-right: 25px;
+		position: relative;
+		top: 7px;
+	}
+	.nav_picture_manuf {
+		width: 43px;
+	}
+	.nav_picture_news {
+		top: 4px;
+	}
+	.nav_picture_subcat {
+		top: 4px;
+	}
+	.nav_picture_catalog {
+		top: 9px;
+	}
+	.nav_picture_list {
+		top: 10px;
+	}
+}
+.active {
+	background: $background_color;
+}
+.nav_top_padding {
+	padding-top: 10px;
+}
+.nav_bottom_padding {
+	padding-bottom: 10px;
+}
+.two_lines_li {
+	border-bottom: 2px solid $nav_lines;
+	border-top: 2px solid $nav_lines;
+}

@@ -1,0 +1,33 @@
+.arrow {
+    opacity: 0;
+    clear: both;
+    @include transition (opacity, 0.3s, linear, 0s);
+    a {
+        color: #fff;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 50%;
+        left: 93%;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        background: $header_and_buttons_text;
+        border: 3px solid $main_color;
+        border-radius: 100%;
+        z-index: 100;
+        &:hover {
+            background: $main_color;
+        }
+        &:hover .fa-angle-up{
+            color: $header_and_buttons_text;
+        }
+        .fa-angle-up {
+            position: relative;
+            right: -14px;
+            top: 6px;
+            color: $main_color;
+            font-size: 24px;
+        }
+    }
+}

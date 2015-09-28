@@ -1,0 +1,54 @@
+.admin_radiobox {
+    .navig_title {
+        margin-left: 0;
+    }
+    p {
+        margin-top: 18px;
+    }
+    span {
+        padding: 3px 0px 0px 7px;
+    }
+    input[type="radio"] {
+        display: none;
+    }
+    input[type="radio"] + span {
+        display: inline-block;
+        position: relative;
+        margin-left: 21px;
+    }
+    input[type="radio"] + span:before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-color: $background_color;
+        left: -21px;
+        top: 1px;
+        border: 3px solid $progress_bar_backgr;
+    }
+    input[type="radio"] + span:before {
+        @include border_radius(50%);
+    }
+    input[type="radio"]:checked + span:before {
+        border: 3px solid $main_color;
+    }
+    input[type="radio"] + span:after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: $main_color;
+        left: -15px;
+        top: 7px;
+        border: 1px solid $main_color;
+        opacity: 0;
+    }
+    input[type="radio"]:checked + span:after {
+        @include border_radius(50%);
+    }
+    input[type="radio"]:checked + span:after {
+       opacity: 1; 
+    }
+}
+
+

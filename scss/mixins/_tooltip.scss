@@ -1,0 +1,26 @@
+@mixin tooltip ($top) {
+	width: 205px;
+	background: $footer;
+	border: 1px solid $footer;
+	border-radius: 7px;
+	position: relative;
+	display: inline-block;
+	float: left;
+	&:after {
+		content:"";
+		position: absolute;
+		left: 46%;
+		top: $top;
+		width: 16px;
+		height: 16px;
+		@include rotate(45deg);
+		background: $footer;
+	}
+	.text {
+		font-size: 13px;
+		color: #ecf0f1;
+		margin: 14px 12px;
+		text-align: center;
+		line-height: 18px;
+	}
+}

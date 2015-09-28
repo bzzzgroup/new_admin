@@ -1,0 +1,19 @@
+.admin_tooltips {
+    .navig_title {
+        margin: 0px 0px 35px 0px;
+        display: inline-block;
+        float: left;
+    }
+    clear: both;
+    .admin_tooltip1 {
+        clear: both;
+        @include tooltip(-9px);
+        margin-left: 30px;
+    }
+    .admin_tooltip2 {
+        clear: both;
+        display: block;
+        @include tooltip(74px);
+        margin: 30px 0px 0px 30px;
+    }
+}
