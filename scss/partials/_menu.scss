@@ -1,7 +1,4 @@
 nav {
-	text-align: center;
-	width: 308px;
-	height: 100% !important;
  	a {
  		display: block;
  		padding: 5px 0px;
@@ -12,12 +9,11 @@ nav {
 }
 .admin_menu {
 	@include box-shadow(7px, 2px, 9px, 0px, $shadow);
-	position: absolute;
-	background: #fff;
-	left: -320px;
-	top: 80px;
-	z-index: 5;
 	height: 100%;
+	background: #fff;
+	margin-right: 20px;
+	float: left;
+	z-index: 5;
 	@include transition(all, 0s, ease-in-out, 0s);
 	.underlined_li {
 		border-bottom: 2px solid $nav_lines;
@@ -47,6 +43,11 @@ nav {
 		text-align: left;
 		color: $navbar_text;
 		padding: 15px 30px;
+		&:active,
+		&:visited,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 	.nav_picture {
 		width: 25px;

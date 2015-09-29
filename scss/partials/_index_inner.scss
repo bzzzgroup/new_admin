@@ -1,13 +1,14 @@
 .index_inner {
-	width: 1300px;
+	min-width: 1024px;
+	max-width: 1280px;
+	display: table;
 	margin: auto;
 	padding-top: 100px;
-	margin-left: 70px;
 	.select_category {
 		margin-left: 15px;
+		float: left;
 		display: inline-block;
-		width: 230px;
-		height: 255px;
+		width: 20%;
 		border: 1px solid $header_and_buttons_text;
 		border-radius: 5px;
 		padding: 1px;
@@ -28,10 +29,11 @@
 		margin-left: 30px;
 	}
 	.support {
-		margin: 10px 0px 170px 175px;
+		margin: 10px 0px 0px 70px;
 		display: inline-block;
 		background: $background_color;
 		width: 200px;
+		float: left;
 		.support_img_div {
 			width: 130px;
 			height: 130px;
@@ -63,15 +65,21 @@
 			margin-bottom: 15px;
 		}
 	}
-	.first_support {
-		margin-left: 30px;
-	}
 }
 .but_support {
 	width: 190px;
+	margin-bottom: 10px;
 }
 .but_category {
-	width: 200px;
+	width: 80%;
 }
-
+.right_part_main {
+	float: left;
+}
+.support_block {
+	margin-bottom: 170px;
+}
+.categories_block {
+	
+}
 
