@@ -267,9 +267,6 @@ nav a {
 .right_part_main {
   float: left; }
 
-.support_block {
-  margin-bottom: 170px; }
-
 .colors_inner {
   color: #666;
   width: 1300px;
@@ -416,8 +413,9 @@ nav a {
   padding-top: 100px;
   color: #666;
   width: 1300px;
-  margin: auto;
-  margin-left: 60px; }
+  margin: auto; }
+  .all_elements_inner .row {
+    margin-bottom: 50px; }
   .all_elements_inner .button {
     background: #3498db;
     color: #fff;
@@ -433,7 +431,7 @@ nav a {
     outline: none;
     cursor: pointer;
     text-decoration: none;
-    margin: 0px 0px 100px 30px;
+    margin: 0px 0px 100px 0px;
     width: 230px; }
     .all_elements_inner .button:hover {
       background: #79aee8;
@@ -442,12 +440,6 @@ nav a {
     .all_elements_inner .button:active {
       background: #2980b9;
       border: 1px solid #2980b9; }
-
-.all_elements_title {
-  margin-left: 298px; }
-
-.row_all_elements {
-  margin-left: 275px; }
 
 .admin_footer {
   z-index: 7;
@@ -479,9 +471,8 @@ nav a {
   padding: 10px 0px 7px 10px;
   width: 230px;
   font-size: 14px;
-  margin-left: 15px;
   outline: none;
-  margin-left: 15px; }
+  margin-right: 15px; }
 .admin_inputs .admin_active_input {
   border: 2px solid #d5d9db;
   background: #f6f8f8;
@@ -516,7 +507,7 @@ nav a {
 
 .progress {
   display: inline-block;
-  margin: 10px 0px 50px 30px;
+  margin: 10px 0px 50px 0px;
   border-radius: 10px;
   width: 220px;
   height: 12px;
@@ -529,7 +520,7 @@ nav a {
   border-radius: 10px; }
 
 #slider-range-min {
-  margin: 10px 0px 0px 40px;
+  margin: 10px 0px 0px 10px;
   background-color: #d7dbdd;
   width: 220px;
   height: 12px;
@@ -605,9 +596,7 @@ nav a {
   .admin_navigation .admin_all_messages {
     display: inline-block;
     float: left;
-    margin: -1px 0px 30px 130px;
-    position: relative;
-    top: 2px; }
+    margin-left: 120px; }
     .admin_navigation .admin_all_messages div {
       display: inline-block;
       float: left;
@@ -616,16 +605,13 @@ nav a {
       color: #fff;
       font-size: 16px;
       height: 40px; }
+    .admin_navigation .admin_all_messages .fa-caret-left, .admin_navigation .admin_all_messages .fa-caret-right {
+      font-size: 28px;
+      line-height: 36px; }
     .admin_navigation .admin_all_messages .fa-caret-left {
-      font-size: 28px;
-      position: relative;
-      left: 14px;
-      top: 4px; }
+      padding-left: 15px; }
     .admin_navigation .admin_all_messages .fa-caret-right {
-      font-size: 28px;
-      position: relative;
-      left: 17px;
-      top: 4px; }
+      padding-left: 17px; }
     .admin_navigation .admin_all_messages .prev_page {
       width: 45px;
       border-top-left-radius: 5px;
@@ -634,12 +620,9 @@ nav a {
       .admin_navigation .admin_all_messages .prev_page:hover {
         background: #2980b9;
         border: 1px solid #2980b9; }
-    .admin_navigation .admin_all_messages .text_all_messages {
-      width: 112px; }
-      .admin_navigation .admin_all_messages .text_all_messages span {
-        position: relative;
-        top: 11px;
-        left: 8px; }
+    .admin_navigation .admin_all_messages .text_all_messages span {
+      line-height: 33px;
+      margin: 0px 20px; }
     .admin_navigation .admin_all_messages .next_page {
       width: 45px;
       border-top-right-radius: 5px;
@@ -648,82 +631,22 @@ nav a {
       .admin_navigation .admin_all_messages .next_page:hover {
         background: #2980b9;
         border: 1px solid #2980b9; }
-  .admin_navigation .admin_page_change {
-    margin-top: 30px;
-    clear: both; }
-    .admin_navigation .admin_page_change .prev_page1 {
-      float: left;
-      width: 45px;
-      height: 40px;
-      background: #d7dbdd;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px; }
-      .admin_navigation .admin_page_change .prev_page1:hover {
-        background: #3498db;
-        border: 1px solid #2980b9; }
-      .admin_navigation .admin_page_change .prev_page1 .fa-caret-left {
-        font-size: 28px;
-        position: relative;
-        left: 3px;
-        top: 0px;
-        color: #fff; }
-    .admin_navigation .admin_page_change .next_page1 {
-      float: left;
-      width: 45px;
-      height: 40px;
-      background: #d7dbdd;
-      width: 45px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px; }
-      .admin_navigation .admin_page_change .next_page1:hover {
-        background: #3498db;
-        border: 1px solid #2980b9; }
-      .admin_navigation .admin_page_change .next_page1 .fa-caret-right {
-        font-size: 28px;
-        position: relative;
-        left: 7px;
-        top: 0px;
-        color: #fff; }
-    .admin_navigation .admin_page_change .admin_pages {
-      float: left;
-      width: 530px;
-      height: 40px;
-      background: #d7dbdd;
-      margin: 0px 3px; }
-      .admin_navigation .admin_page_change .admin_pages .one_page {
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        width: 17px;
-        height: 17px;
-        font-size: 12px;
-        background: #fff;
-        border: 1px solid #fff;
-        color: #fff;
-        border-radius: 50%;
-        margin: 12px 0px 0px 8px;
-        text-align: center; }
-        .admin_navigation .admin_page_change .admin_pages .one_page a {
-          position: relative;
-          top: 2px; }
-        .admin_navigation .admin_page_change .admin_pages .one_page:hover {
-          background: #3498db;
-          color: #fff;
-          width: 23px;
-          height: 23px;
-          border: 1px solid #3498db;
-          margin: 12px 0px 0px 2px;
-          bottom: 2px;
-          left: 3px; }
-          .admin_navigation .admin_page_change .admin_pages .one_page:hover a {
-            top: 4px;
-            color: #fff !important; }
-      .admin_navigation .admin_page_change .admin_pages .always_visible_number {
-        color: #d7dbdd;
-        position: relative !important;
-        bottom: 3px; }
-      .admin_navigation .admin_page_change .admin_pages .not_always_visible_number {
-        color: #fff; }
+  .admin_navigation .pagination li a {
+    border: 1px solid grey;
+    background: #d7dbdd;
+    color: grey; }
+    .admin_navigation .pagination li a:hover, .admin_navigation .pagination li a:focus {
+      color: #fff;
+      background: #3498db;
+      border: 1px solid grey; }
+  .admin_navigation .pagination .prev, .admin_navigation .pagination .next {
+    background: #d7dbdd; }
+    .admin_navigation .pagination .prev:hover, .admin_navigation .pagination .next:hover {
+      background: #3498db; }
+  .admin_navigation .pagination .prev {
+    margin-right: 4px; }
+  .admin_navigation .pagination .next {
+    margin-left: 4px; }
 
 .page_clicked {
   color: red; }
@@ -731,114 +654,34 @@ nav a {
 .two_numbers_page {
   right: 1px; }
 
-.admin_checkboxes {
-  clear: both;
-  margin-bottom: 20px; }
-  .admin_checkboxes .squared, .admin_checkboxes .squared2, .admin_checkboxes .squared3, .admin_checkboxes .squared4, .admin_checkboxes .squared5 {
-    position: relative;
-    margin-left: 33px; }
-    .admin_checkboxes .squared label, .admin_checkboxes .squared2 label, .admin_checkboxes .squared3 label, .admin_checkboxes .squared4 label, .admin_checkboxes .squared5 label {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      position: absolute;
-      top: 1px;
-      left: 0;
-      display: block;
-      background: #d7dbdd;
-      border-radius: 5px; }
-      .admin_checkboxes .squared label:after, .admin_checkboxes .squared2 label:after, .admin_checkboxes .squared3 label:after, .admin_checkboxes .squared4 label:after, .admin_checkboxes .squared5 label:after {
-        content: '';
-        width: 11px;
-        height: 7px;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        border: 2px solid #fff;
-        border-top: none;
-        border-right: none;
-        background: transparent;
-        opacity: 0;
-        -moz-transform: rotate(-45deg);
-        /* ╨Ф╨╗╤П Firefox */
-        -ms-transform: rotate(-45deg);
-        /* ╨Ф╨╗╤П IE */
-        -webkit-transform: rotate(-45deg);
-        /* ╨Ф╨╗╤П Safari, Chrome, iOS */
-        -o-transform: rotate(-45deg);
-        /* ╨Ф╨╗╤П Opera */
-        transform: rotate(-45deg); }
-      .admin_checkboxes .squared label:hover::after, .admin_checkboxes .squared2 label:hover::after, .admin_checkboxes .squared3 label:hover::after, .admin_checkboxes .squared4 label:hover::after, .admin_checkboxes .squared5 label:hover::after {
-        opacity: 0.5; }
-    .admin_checkboxes .squared input[type=checkbox], .admin_checkboxes .squared2 input[type=checkbox], .admin_checkboxes .squared3 input[type=checkbox], .admin_checkboxes .squared4 input[type=checkbox], .admin_checkboxes .squared5 input[type=checkbox] {
-      visibility: hidden; }
-      .admin_checkboxes .squared input[type=checkbox]:checked + label:after, .admin_checkboxes .squared2 input[type=checkbox]:checked + label:after, .admin_checkboxes .squared3 input[type=checkbox]:checked + label:after, .admin_checkboxes .squared4 input[type=checkbox]:checked + label:after, .admin_checkboxes .squared5 input[type=checkbox]:checked + label:after {
-        opacity: 1; }
-      .admin_checkboxes .squared input[type=checkbox]:checked + label, .admin_checkboxes .squared2 input[type=checkbox]:checked + label, .admin_checkboxes .squared3 input[type=checkbox]:checked + label, .admin_checkboxes .squared4 input[type=checkbox]:checked + label, .admin_checkboxes .squared5 input[type=checkbox]:checked + label {
-        background: #3498db; }
-  .admin_checkboxes .input_text {
-    color: #666;
-    position: relative;
-    left: 34px;
-    bottom: 15px; }
-  .admin_checkboxes .label2 {
-    position: relative;
-    top: 39px !important; }
-  .admin_checkboxes .label3 {
-    position: relative;
-    top: 74px !important; }
-  .admin_checkboxes .label4 {
-    position: relative;
-    top: 109px !important; }
-  .admin_checkboxes .label5 {
-    position: relative;
-    top: 145px !important; }
+.radio_block, .checkbox_block {
+  width: 200px;
+  margin-right: 30px;
+  float: left; }
 
-.admin_radiobox .navig_title {
-  margin-left: 0; }
-.admin_radiobox p {
-  margin-top: 18px; }
-.admin_radiobox span {
-  padding: 3px 0px 0px 7px; }
-.admin_radiobox input[type="radio"] {
-  display: none; }
-.admin_radiobox input[type="radio"] + span {
-  display: inline-block;
-  position: relative;
-  margin-left: 21px; }
-.admin_radiobox input[type="radio"] + span:before {
-  content: '';
-  position: absolute;
+.checkbox_block label, .radio_block label {
+  margin-bottom: 12px; }
+
+.radio_block label {
+  display: block; }
+
+.mdl-checkbox__box-outline {
+  /*background: $progress_bar_backgr;*/
+  border: 2px solid #d7dbdd;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px; }
+
+.mdl-radio__outer-circle {
   width: 18px;
   height: 18px;
-  background-color: #ecf0f1;
-  left: -21px;
-  top: 1px;
-  border: 3px solid #d7dbdd; }
-.admin_radiobox input[type="radio"] + span:before {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -khtml-border-radius: 50%; }
-.admin_radiobox input[type="radio"]:checked + span:before {
-  border: 3px solid #3498db; }
-.admin_radiobox input[type="radio"] + span:after {
-  content: '';
-  position: absolute;
+  border: 3px solid #2196f3 !important; }
+
+.mdl-radio__inner-circle {
+  top: 10px;
+  left: 6px;
   width: 6px;
-  height: 6px;
-  background-color: #3498db;
-  left: -15px;
-  top: 7px;
-  border: 1px solid #3498db;
-  opacity: 0; }
-.admin_radiobox input[type="radio"]:checked + span:after {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -khtml-border-radius: 50%; }
-.admin_radiobox input[type="radio"]:checked + span:after {
-  opacity: 1; }
+  height: 6px; }
 
 .switch {
   -moz-user-select: none;
@@ -948,8 +791,7 @@ nav a {
     border-radius: 7px;
     position: relative;
     display: inline-block;
-    float: left;
-    margin-left: 30px; }
+    float: left; }
     .admin_tooltips .admin_tooltip1:after {
       content: "";
       position: absolute;
@@ -983,7 +825,7 @@ nav a {
     position: relative;
     display: inline-block;
     float: left;
-    margin: 30px 0px 0px 30px; }
+    margin-top: 30px; }
     .admin_tooltips .admin_tooltip2:after {
       content: "";
       position: absolute;
@@ -1263,5 +1105,18 @@ h5 {
 main {
   width: 100%;
   background: #ecf0f1; }
+
+.index_inner {
+  display: table; }
+
+.driver, .right_part_main {
+  display: table-cell; }
+
+.driver {
+  min-width: 275px;
+  background: red; }
+
+.ko {
+  color: #444; }
 
 /*# sourceMappingURL=style.css.map */

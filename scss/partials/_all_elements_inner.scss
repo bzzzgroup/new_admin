@@ -3,16 +3,12 @@
 	color: $main_part_title;
 	width: 1300px;
 	margin: auto;
-	margin-left: 60px;
+	.row {
+		margin-bottom: 50px;
+	}
 	.button {
 		@include button();
-		margin: 0px 0px 100px 30px;
+		margin: 0px 0px 100px 0px;
 		width: 230px;
 	}
-}
-.all_elements_title {
-	margin-left: 298px;
-}
-.row_all_elements {
-	margin-left: 275px;
 }

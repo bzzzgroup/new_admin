@@ -58,9 +58,7 @@
     .admin_all_messages {
         display: inline-block;
         float: left;
-        margin: -1px 0px 30px 130px;
-        position: relative;
-        top: 2px;
+        margin-left: 120px;
         div {
             display: inline-block;
             float: left;
@@ -70,17 +68,15 @@
             font-size: 16px;
             height: 40px;
         }
-        .fa-caret-left {
+        .fa-caret-left, .fa-caret-right {
             font-size: 28px;
-            position: relative;
-            left: 14px;
-            top: 4px;
+            line-height: 36px;
+        }
+        .fa-caret-left {
+            padding-left: 15px; 
         }
         .fa-caret-right {
-            font-size: 28px;
-            position: relative;
-            left: 17px;
-            top: 4px;
+            padding-left: 17px;
         }
         .prev_page {
             width: 45px;
@@ -93,11 +89,9 @@
             }
         }
         .text_all_messages {
-            width: 112px;
             span {
-                position: relative;
-                top: 11px;
-                left: 8px;
+                line-height: 33px;
+                margin: 0px 20px;
             }
         }
         .next_page {
@@ -111,95 +105,32 @@
             }   
         }
     }
-    .admin_page_change {
-        margin-top: 30px;
-        clear: both;
-        .prev_page1 {
-            float: left;
-            width: 45px;
-            height: 40px;
-            background: $progress_bar_backgr;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px; 
-            &:hover {
-                background: $main_color;
-                border: 1px solid $more_dark_main_color;
-            }
-            .fa-caret-left {
-                font-size: 28px;
-                position: relative;
-                left: 3px;
-                top: 0px;
-                color: $header_and_buttons_text;
-            }
-        }
-        .next_page1 {
-            float: left;
-            width: 45px;
-            height: 40px;
-            background: $progress_bar_backgr;
-            width: 45px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            &:hover {
-                background: $main_color;
-                border: 1px solid $more_dark_main_color;
-            }   
-            .fa-caret-right {
-                font-size: 28px;
-                position: relative;
-                left: 7px;
-                top: 0px;
-                color: $header_and_buttons_text;
-            }
-        }
-        .admin_pages {
-            float: left;
-            width: 530px;
-            height: 40px;
-            background: $progress_bar_backgr;
-            margin: 0px 3px;
-            .one_page {
-                cursor: pointer;
-                position: relative;
-                display: inline-block;
-                width: 17px;
-                height: 17px;
-                font-size: 12px;
-                background: $header_and_buttons_text;
-                border: 1px solid $header_and_buttons_text;
-                color: $header_and_buttons_text;
-                border-radius: 50%;
-                margin: 12px 0px 0px 8px;
-                text-align: center;
-                a {
-                    position: relative;
-                    top: 2px;
-                }
-                &:hover {
+    .pagination {
+        li {
+            a {
+                border: 1px solid grey;
+                background: $progress_bar_backgr;
+                color: grey;
+                &:hover,
+                &:focus {
+                    color: #fff;
                     background: $main_color;
-                    color: $header_and_buttons_text;
-                    width: 23px;
-                    height: 23px;
-                    border: 1px solid $main_color;
-                    margin: 12px 0px 0px 2px;
-                    bottom: 2px;
-                    left: 3px;
-                    a {
-                        top: 4px;
-                        color: #fff !important;
-                    }
-                } 
+                    border: 1px solid grey;
+                }
             }
-            .always_visible_number {
-                color: $progress_bar_backgr;
-                position: relative !important;
-                bottom: 3px;
-            } 
-            .not_always_visible_number {
-                color: #fff;
-            }  
         }
+        .prev, .next {
+            background: $progress_bar_backgr;
+            &:hover {
+                background: $main_color;
+            }
+        }
+        .prev {
+            margin-right: 4px;
+        }
+        .next {
+            margin-left: 4px;
+        }   
     }
 }
 .page_clicked {
