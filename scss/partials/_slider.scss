@@ -9,7 +9,7 @@
     margin-bottom: 20px;
 }
 .ui-widget-header {
-    border: 1px solid $main_color !important;
+    border: 6px solid $main_color !important;
     background: $main_color;
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -24,5 +24,7 @@
     background: $progress_bar_backgr;
 }
 .ui-slider-horizontal .ui-slider-handle {
-    top: -4px;
+    top: -14px;
+    position: relative;
+    border:15px solid $more_dark_main_color;
 }

@@ -1,32 +1,35 @@
-$font: 'Roboto', sans-serif;
-$background_color: #ecf0f1;
-$main_color: #3498db;
-$more_dark_main_color: #2980b9;
-$header_and_buttons_text: #fff;
-$navbar_text: #686868;
-$main_part_title: #666;
-$to_add_item_text: #3d4a5d;
-$nav_lines: #e6e6e6;
-$footer: #7f8c8d;
-$shadow: #c9c9c9;
-$progress_bar_backgr: #d7dbdd;
-$alert_input_color: #e74c3c;
-$disabled_input_backgr: #dfe2e4;
-$disabled_input_color: #d7dee2;
-$slider_circle: #2980b9;
-$switch_backgr: #bdc2c5;
-$popup: #c2c5ca;
-$button_on_hover: #79aee8;
+@import "mixins/box_shadow";
+@import "mixins/transition";
+@import "mixins/button";
+@import "mixins/rotate";
+@import "mixins/tooltip";
+@import "mixins/input_placeholder";
+@import "mixins/border_radius";
+@import "mixins/user_select";
+
+@import "partials/variables";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/drawer";
+@import "partials/all_elements";
+@import "partials/index_inner";
+@import "partials/inputs";
+@import "partials/progress_bar";
+@import "partials/slider";
+@import "partials/navigation";
+@import "partials/checkbox_radio";
+@import "partials/switch";
+@import "partials/tooltips";
+@import "partials/text_box";
+@import "partials/headers";
+@import "partials/scroll_arrow";
+@import "partials/popup";
 
 body {
 	z-index: 3;
     font-family: $font;
     position: relative;
-    height: 100%;
     overflow-x: hidden;
-}
-html  {
-	height: 100%;
 }
 .dropdown-menu {
 	li {
@@ -42,39 +45,9 @@ a {
 	color: $header_and_buttons_text;
 	}
 }
-.first_left_element {
-	margin-left: 284px;
-}
 .col-lg-4, .col-lg-3 {
 	padding-left: 0px;
 }
-
-@import "mixins/box_shadow";
-@import "mixins/transition";
-@import "mixins/button";
-@import "mixins/rotate";
-@import "mixins/tooltip";
-@import "mixins/input_placeholder";
-@import "mixins/border_radius";
-@import "mixins/user_select";
-@import "partials/header";
-@import "partials/menu";
-@import "partials/index_inner";
-@import "partials/colors_inner";
-@import "partials/all_elements_inner";
-@import "partials/footer";
-@import "partials/inputs";
-@import "partials/progress_bar";
-@import "partials/slider";
-@import "partials/navigation";
-@import "partials/checkbox_radio";
-@import "partials/switch";
-@import "partials/tooltips";
-@import "partials/text_box";
-@import "partials/headers";
-@import "partials/scroll_arrow";
-@import "partials/popup";
-
 .button {
 	@include button();
 }
@@ -82,24 +55,9 @@ main {
 	width: 100%;
 	background: $background_color;
 }
-.index_inner {
-	display: table;
+.tools_block {
+	margin-bottom: 50px;
 }
-.driver,.right_part_main {
-	display: table-cell;
-}
-.driver {
-	min-width: 275px;
-	background: red;
-
-}
-.ko	{
-	color: #444;
-}
-
-
-
-
 
 
 

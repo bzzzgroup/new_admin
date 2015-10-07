@@ -1,39 +1,35 @@
 .index_inner {
-	min-width: 1024px;
-	max-width: 1280px;
+	padding-top: 75px;
 	display: table;
 	margin: auto;
-	padding-top: 100px;
 	.select_category {
-		margin-left: 15px;
-		float: left;
-		display: inline-block;
-		width: 20%;
-		border: 1px solid $header_and_buttons_text;
-		border-radius: 5px;
-		padding: 1px;
-		background: $header_and_buttons_text;
-		.img_div {
-			width: 100px;
+		margin-bottom: 20px;
+		.category_wrap {
+			width: 95%;
+			border: 1px solid $header_and_buttons_text;
+			border-radius: 5px;
+			background: $header_and_buttons_text;
+			display: table;
 			margin: auto;
-			margin-top: 25px;
-		}
-		p {
-			text-align: center;
-			font-size: 20px;
-			margin-top: 30px;
-			font-weight: bold;
+			.img_div {
+				width: 100px;
+				margin: auto;
+				margin-top: 25px;
+			}
+			p {
+				height: 40px;
+				text-align: center;
+				font-size: 20px;
+				margin-top: 30px;
+				font-weight: bold;
+			}
 		}
 	}
 	.first_category {
 		margin-left: 30px;
 	}
 	.support {
-		margin: 10px 0px 0px 70px;
-		display: inline-block;
 		background: $background_color;
-		width: 200px;
-		float: left;
 		.support_img_div {
 			width: 130px;
 			height: 130px;
@@ -62,9 +58,11 @@
 			margin: auto;
 			line-height: 22px;
 			font-weight: bold;
-			margin-bottom: 15px;
 		}
 	}
+}
+.support_block {
+	margin-bottom: 130px;
 }
 .but_support {
 	width: 190px;
@@ -75,5 +73,6 @@
 }
 .right_part_main {
 	float: left;
+	width: 100%;
 }
 

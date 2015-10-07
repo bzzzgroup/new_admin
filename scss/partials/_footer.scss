@@ -1,27 +1,18 @@
-.admin_footer {
-	z-index: 7;
-	height: 50px;
-	clear: both;
-	width: 100%;
+footer {
 	background: $footer;
-	color: $header_and_buttons_text;
-	.footer_inner {
-		margin: auto;
-		width: 1200px;
-		a {
-			display: table;
-			margin: auto;
-			color: #fff;
-			font-size: 15px;
-			text-align: center;
-			margin-top: 15px;
-			text-decoration: none;
-			.bzzz_logo {
-				position: relative;
-				top: 3px;
-				left: 3px;
-				width: 56px;
-			}
+	height: 50px;
+	text-align: center;
+	clear: both;
+	a {
+		color: #fff	!important;
+		font-size: 15px;
+		text-decoration: none;
+		line-height: 50px;
+		.bzzz_logo {
+			position: relative;
+			top: -2px;
+			left: 5px;
+			width: 56px;
 		}
 	}
 }
