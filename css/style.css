@@ -381,7 +381,7 @@ main {
   margin-bottom: 20px; }
 
 .ui-widget-header {
-  border: 6px solid #3498db !important;
+  border: 1px solid #3498db !important;
   background: #3498db; }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -396,9 +396,7 @@ main {
   background: #d7dbdd; }
 
 .ui-slider-horizontal .ui-slider-handle {
-  top: -14px;
-  position: relative;
-  border: 15px solid #2980b9; }
+  top: -4px; }
 
 .admin_navigation {
   -moz-user-select: none;
@@ -723,7 +721,7 @@ main {
       content: "";
       position: absolute;
       left: 46%;
-      top: -9px;
+      top: -8px;
       width: 16px;
       height: 16px;
       -moz-transform: rotate(45deg);
@@ -757,7 +755,7 @@ main {
       content: "";
       position: absolute;
       left: 46%;
-      top: 74px;
+      bottom: -9px;
       width: 16px;
       height: 16px;
       -moz-transform: rotate(45deg);

@@ -8,12 +8,12 @@
     clear: both;
     .admin_tooltip1 {
         clear: both;
-        @include tooltip(-9px);
+        @include tooltip1(-8px);
     }
     .admin_tooltip2 {
         clear: both;
         display: block;
-        @include tooltip(74px);
+        @include tooltip2(-9px);
         margin-top: 30px;
     }
 }
