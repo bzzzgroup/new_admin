@@ -2,15 +2,20 @@ main {
 	width: 100%;
 	background: $background_color;
 	z-index: -3;
-	position: absolute;
-	margin-top: 75px;
 	.all_elements_inner {
-		color: $main_part_title;
-		width: 1200px;
+		padding-top: 75px;
+		min-width: 1024px;
+		max-width: 1280px;
+		display: table;
 		margin: auto;
 		.button {
 			@include button();
-			margin: 0px 30px;
+		}
+		.row {
+			margin-bottom: 50px;
 		}
 	}
 }		
+.tools_block {
+	margin-bottom: 50px;
+}

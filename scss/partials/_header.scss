@@ -44,20 +44,20 @@ header	{
 		}
 		.fa-external-link {
 			font-size: 24px;
-			margin: 26px 20px 0px 0px;
+			margin: 16px 20px 0px 0px;
 			float: left;
 		}
 		.go_to {
-			margin: 31px 30px 0px 0px;
+			margin: 10px 30px 0px 0px;
 			float: left;
 		}
 		.fa-user {
 			font-size: 24px;
-			margin: 26px 20px 0px 0px;
+			margin: 14px 20px 0px 0px;
 			float: left;
 		}
 		.hi {
-			margin: 31px 10px 0px 0px;
+			margin: 11px 10px 0px 0px;
 			float: left;
 			position: relative;
 			.to_log_out {
@@ -94,7 +94,7 @@ header	{
 				}
 			}
 			.fa-caret-down {
-				margin: 0px 30px 0px 10px;
+				margin: 2px 30px 0px 10px;
 				position: relative;
 				bottom: 4px;
 				font-size: 24px;
@@ -110,4 +110,17 @@ header	{
 		}
 	}
 }
-
+.mdl-layout__header {
+	background: $main_color;
+	position: static !important;
+}
+.mdl-layout__header,
+.mdl-layout__drawer-button {
+	z-index: 15;
+}
+.mdl-layout__drawer-button {
+	margin: 10px 17px;
+}
+.mdl-layout__container {
+	position: static;
+}
