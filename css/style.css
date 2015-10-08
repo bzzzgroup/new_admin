@@ -501,13 +501,12 @@ main {
           bottom: 0; }
       .admin_navigation .pagination li a {
         color: #d7dbdd;
-        border-radius: 50%;
-        padding: 0px 6px;
         font-size: 12px;
         margin: 0px 5px; }
         .admin_navigation .pagination li a:hover, .admin_navigation .pagination li a:focus {
           color: #fff;
-          background: #3498db; }
+          background: #3498db;
+          padding: 1px 15px; }
     .admin_navigation .pagination .prev, .admin_navigation .pagination .next {
       background: #d7dbdd; }
       .admin_navigation .pagination .prev:hover, .admin_navigation .pagination .next:hover {
@@ -522,6 +521,18 @@ main {
       .admin_navigation .pagination .fa-caret-left:hover,
       .admin_navigation .pagination .fa-caret-left:focus {
         color: #3498db; }
+
+.page {
+  border-radius: 50%;
+  padding: 0px 6px !important; }
+  .page:hover, .page:focus {
+    padding: 1px 6px !important;
+    position: relative;
+    bottom: 1px; }
+
+.page_2_numbers {
+  border-radius: 30px;
+  padding: 1px 6px !important; }
 
 .radio_block,
 .checkbox_block {
@@ -1046,5 +1057,8 @@ main {
 
 .tools_block {
   margin-bottom: 50px; }
+
+.foo {
+  color: red !important; }
 
 /*# sourceMappingURL=style.css.map */

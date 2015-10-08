@@ -127,14 +127,13 @@
             }
             a {
                 color: #d7dbdd;
-                border-radius: 50%;
-                padding: 0px 6px;
                 font-size: 12px;
                 margin: 0px 5px;
                 &:hover,
                 &:focus {
                     color: #fff;
                     background: $main_color;
+                    padding: 1px 15px;
                 }
             }
         }
@@ -156,4 +155,18 @@
             }
         }
     }
+}
+.page {
+    border-radius: 50%;
+    padding: 0px 6px !important;
+    &:hover,
+    &:focus {
+        padding: 1px 6px !important;
+        position: relative;
+        bottom: 1px;
+    }
+}
+.page_2_numbers {
+    border-radius: 30px;
+    padding: 1px 6px !important;
 }
