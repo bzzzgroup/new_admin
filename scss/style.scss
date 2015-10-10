@@ -9,58 +9,45 @@
 
 @import "partials/variables";
 @import "partials/header";
-@import "partials/footer";
 @import "partials/drawer";
-@import "partials/all_elements";
-@import "partials/index_inner";
-@import "partials/inputs";
-@import "partials/progress_bar";
-@import "partials/slider";
-@import "partials/navigation";
-@import "partials/checkbox_radio";
-@import "partials/switch";
-@import "partials/tooltips";
-@import "partials/text_box";
-@import "partials/headers";
+@import "partials/index";
+@import "partials/popup_page";
+@import "partials/footer";
 @import "partials/scroll_arrow";
-@import "partials/popup";
+@import "partials/helpers";
 
 body {
-	z-index: 3;
-    font-family: $font;
-    position: relative;
-    overflow-x: hidden;
-}
-.dropdown-menu {
-	li {
-		a {
-			padding: 0;
-		}
-	}
-}
-a {
- 	&:visited,
- 	&:hover {
-	text-decoration: none;
-	color: $header_and_buttons_text;
-	}
-}
-.col-lg-4, .col-lg-3 {
-	padding-left: 0px;
-}
+	font-family: Roboto;
+} 
 .button {
 	@include button();
 }
-main {
+.content {
 	width: 100%;
-	background: $background_color;
+	display: block;
+	min-height: 500px;
+	height: 100%;
+	position: relative;
+    background: $background_color;
+}
+.container {
+	padding-left: 315px;
+	@include transition (padding, 0.5s, ease-out, 0s);
+}
+ul {
+	li {
+		list-style-type: none;
+	}
 }
 .tools_block {
 	margin-bottom: 50px;
 }
-
-.foo {
-	color: red !important;
+@media screen and (min-width: 1260px) {
+  	.container {
+    	width: 1280px;
+  	}
+  	.col-lg-3 {
+  		padding-right: 5px;
+  		padding-left: 5px;
+  	}
 }
-
-

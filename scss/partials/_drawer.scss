@@ -1,42 +1,51 @@
-.mdl-layout__drawer {
-    width: 297px;
-    a {
-        &:hover {
-            background: $background_color;
-            text-decoration: none;
-        }
-    }
-}
-.mdl-layout__drawer {
-    transform: translateX(-300px);
-}
-.mdl-navigation {
-    padding-top: 0 !important;
-} 
-nav {
+.drawer {
+    box-shadow: 7px 0px 9px 0px #c9c9c9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 291px;
+    height: 100%;
+    z-index: 0;
+    background: #fff;
     a {
         display: block;
-        padding: 5px 0px;
-        &:hover {
-            text-decoration: underline;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        text-align: left;
+        color: $navbar_text !important;
+        padding: 15px 35px;
+        &:active,
+        &:visited,
+        &:focus {
+            text-decoration: none !important;
         }
     }
-}
-.admin_menu {
-    padding-top: 65px;
-    background: #fff;
-    .underlined_li {
-        border-bottom: 2px solid $nav_lines;
+    ul {
+        padding-left: 0;
     }
     li {
-        clear: both;
-        &:nth-child(7) {
-            position: relative;
-            right: 11px;
-            img {
-                margin-right: 18px;
+        &:hover {
+            a:hover {
+            background: $background_color;
+                text-decoration: none;
             }
         }
+        clear: both;
+        &:nth-child(1) {
+            margin-top: 20px;
+        }
+        &:nth-child(7) {
+            img {
+                margin-right: 11px;
+                position: relative;
+                right: 12px;
+            }
+        }
+    }
+    .underlined_li {
+        border-bottom: 2px solid $nav_lines;
     }
     .first_li {
         margin-top: 20px;
@@ -52,23 +61,9 @@ nav {
         @extend .nav_line1; 
         height: 1px;
     }
-    a {
-        text-transform: uppercase;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        text-align: left;
-        color: $navbar_text !important;
-        padding: 15px 30px;
-        &:active,
-        &:visited,
-        &:focus {
-            text-decoration: none;
-        }
-    }
     .nav_picture {
         width: 25px;
-        margin-right: 25px;
+        margin-right: 30px;
         position: relative;
     }
     .nav_picture_manuf {

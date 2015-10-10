@@ -1,354 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin</title>
+		<title>New Admin</title>
 		<meta name="viewport" content="width=1200, initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-
-		<link href='http://fonts.googleapis.com/css?family=Roboto:500,700,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-indigo.min.css"> 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-light_blue.min.css" /> 
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
-
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+		
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-	    <script src="js/arrow_up.js"></script>	
-	    <script src="js/popup.js"></script>
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	    <script src="js/drawer.js"></script>
 	    <script src="js/page_change.js"></script>
 	    <script src="js/slider.js"></script>
-
-
+	    <script src="js/popup.js"></script>
+	    <script src="js/scroll_arrow.js"></script>
 	</head>
 	<body>
-	
-		<!--CONTAINER WITH ALL BLOCKS-->
-		<div class="mdl-layout mdl-js-layout">
-			<!--HEADER-->
-	  		<header class="mdl-layout__header">
-	    		<div class="mdl-layout-icon"></div>
-	    		<div class="mdl-layout__header-row">
-	      			<span class="mdl-layout-title">Company name</span>
-	      			<div class="mdl-layout-spacer"></div>
-		      		<nav class="mdl-navigation">
-						<div class="right_part_header">
-							<span>
-								<i class="fa fa-external-link"></i>
-							</span>
-							<span class="go_to">
-								<a href="#">
-									Перейти на www.web.com
-								</a>
-							</span>
-							<span>	
-								<i class="fa fa-user"></i>
-							</span>
-							<div class="hi dropdown clearfix">
-								<a href="#" class="clearfix dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									Привет, admin_name
-									<span>
-										<i class="fa fa-caret-down"></i>
-									</span>
-								</a>
-								<ul class="to_log_out dropdown-menu" aria-labelledby="dropdownMenu1">
-									<li>
-										<a href="login.html" id="login">
-											<span>
-												<i class="fa fa-sign-out"></i>
-											</span>
-											<span class="log_out">
-												Выйти
-											</span>
-										</a>
-									</li>
-								</ul>
-							</div>
+		<header id="header">
+			<!--left part of header-->
+			<div class="left_part_header">
+				<input type="checkbox" id="menuToggle">
+				<label for="menuToggle" class="menu-icon">
+					&#9776;
+				</label>
+				<h1 class="company_name">
+					<a href="index.html">
+						company name
+					</a>
+				</h1>
+			</div><!--end of left part header-->
 
-						</div><!--end of Right part header-->
-		     		</nav>
-	    		</div><!--end of Mdl-layout__header-row-->
-	  		</header>
-	
-			<!--DRAWER-->
-			<div class="mdl-layout__drawer">
-			    <nav class="mdl-navigation ">
-				    <ul class="admin_menu">
-						<li class="first_li active">
-							<a href="#">
-								<img src="image/Exterior-100_sm.png" alt="main page" class="nav_picture">
-								главная
-							</a>
-						</li>
+			<!--right part of header-->
+			<div class="right_part_header">
+				<span>
+					<i class="fa fa-external-link"></i>
+				</span>
+				<span class="go_to">
+					<a href="#">
+						Перейти на www.web.com
+					</a>
+				</span>
+				<span>	
+					<i class="fa fa-user"></i>
+				</span>
+				<div class="hi dropdown clearfix">
+					<a href="#" class="clearfix dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Привет, admin_name
+						<span>
+							<i class="fa fa-caret-down"></i>
+						</span>
+					</a>
+					<ul class="to_log_out dropdown-menu" aria-labelledby="dropdownMenu1">
 						<li>
-							<a href="#">
-								<img src="image/Shopping-Cart-100_sm.png" alt="to add product" class="nav_picture">
-								добавить товар
-							</a>
-						</li>
-						<li class="underlined_li clearfix nav_bottom_padding">
-							<a href="#">
-								<img src="image/Megaphone-100_sm.png" alt="to add news" class="nav_picture nav_picture_news">
-								добавить новость
-							</a>
-						</li>
-						<li class="nav_top_padding">
-							<a href="#">
-								<img src="image/Open-Folder-100_sm.png" alt="subcategories" class="nav_picture nav_picture_subcat">
-								подкатегории
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="image/Dossier-100_sm.png" alt="catalog" class="nav_picture nav_picture_catalog">
-								каталог
-							</a>
-						</li>
-						<li class="clearfix nav_bottom_padding">
-							<a href="#">
-								<img src="image/View-Details-100_sm.png" alt="list of news" class="nav_picture nav_picture_list">
-								список новостей
-							</a>
-						</li>
-						<li class="two_lines_li clearfix nav_top_padding nav_bottom_padding">
-							<a href="#">
-								<img src="image/Conference-100_sm.png" alt="manufacturers" class="nav_picture nav_picture_manuf">
-								производители
+							<a href="login.html" id="login">
+								<span>
+									<i class="fa fa-sign-out"></i>
+								</span>
+								<span class="log_out">
+									Выйти
+								</span>
 							</a>
 						</li>
 					</ul>
-			    </nav>
-			</div><!--end of mdl-layout__drawer-->
+				</div><!--end of Hi-->
+			</div><!--end of Right part header-->	
+		</header>
 
-			<!--MAIN CONTENT-->
-	  		<main class="mdl-layout__content">
-				<div class="index_inner container">
-					<div class="right_part_main">
-						<h1 class="all_elements_title col-lg-12">
-							Элементы и их состояния
-						</h1>
-						<div class="tools_block clearfix">
-							<div class="admin_inputs clearfix">
-								<h2 class="col-lg-12">
-									Inputs
-								</h2>
-								<input class="admin_active_input col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2" />
-								<input class="admin_active_input col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-8 col-xs-offset-2" placeholder="Disabled" disabled/>
-								<input class="admin_alert_input col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-8 col-xs-offset-2" placeholder="Alert"/>
-							</div><!--end of Inputs-->
-						</div><!--end of Tools_block-->
-					
-						<div class="tools_block clearfix">
-							<div class="admin_progress_sliders clearfix col-lg-6 col-md-6 sol-sm-6 col-xs-12">
-								<h2>
-									Progressbars and Sliders
-								</h2>
-								<!--Progressbar-->
-								<div class="progress">
-			  						<div class="progress-bar" role="progressbar"></div>
-								</div>
-								<!-- Slider-->
-								<div id="slider-range-min"></div>
-							</div><!--end of progress_sliders-->
+		<!--DRAWER AND CONTENT IN RIGHT PART-->
+		<div class="content clearfix">
+			<!--DRAWER-->
+			<nav class="drawer">
+				<ul>
+					<li class="active">
+						<a href="#">
+							<img src="image/Exterior-100_sm.png" alt="main page" class="nav_picture">
+							главная
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="image/Shopping-Cart-100_sm.png" alt="to add product" class="nav_picture">
+							добавить товар
+						</a>
+					</li>
+					<li class="clearfix nav_bottom_padding">
+						<a href="#">
+							<img src="image/Megaphone-100_sm.png" alt="to add news" class="nav_picture nav_picture_news">
+							добавить новость
+						</a>
+					</li>
+					<li class="nav_top_padding">
+						<a href="#">
+							<img src="image/Open-Folder-100_sm.png" alt="subcategories" class="nav_picture nav_picture_subcat">
+							подкатегории
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="image/Dossier-100_sm.png" alt="catalog" class="nav_picture nav_picture_catalog">
+							каталог
+						</a>
+					</li>
+					<li class="clearfix nav_bottom_padding">
+						<a href="#">
+							<img src="image/View-Details-100_sm.png" alt="list of news" class="nav_picture nav_picture_list">
+							список новостей
+						</a>
+					</li>
+					<li class="two_lines_li clearfix nav_top_padding nav_bottom_padding">
+						<a href="#">
+							<img src="image/Conference-100_sm.png" alt="manufacturers" class="nav_picture nav_picture_manuf">
+							производители
+						</a>
+					</li>
+				</ul>
+		    </nav><!--end of Drawer-->
 
-							<div class="admin_navigation clearfix col-lg-6 col-md-6 sol-sm-6 col-xs-12">
-								<h2>
-									Navigation
-								</h2>
-								<div class="clearfix">
-									<div class="admin_display_types">
-										<button class="first_type">
-											<i class="fa fa-align-justify"></i>
-										</button>
-										<button class="second_type">
-											<i class="fa fa-list"></i>
-										</button>
-										<button class="third_type">
-										</button>
-										<button class="fourth_type">
-											<i class="fa fa-th"></i>
-										</button>
-									</div>
-
-									<div class="admin_all_messages col-xs-12">
-										<div class="prev_page">
-											<i class="fa fa-caret-left"></i>
-										</div>
-										<div class="text_all_messages">
-											<span>
-												All messages 
-											</span>
-										</div>
-										<div class="next_page">
-											<i class="fa fa-caret-right"></i>
-										</div>
-									</div>
-								</div >
-								<ul class="pagination">
-								    <li>
-								      <a href="#" aria-label="Previous" class="prev">
-								        <i class="fa fa-caret-left"></i>
-								      </a>
-								    </li>
-								    <li><a href="#" class="page">1</a></li>
-								    <li><a href="#" class="page">2</a></li>
-								    <li><a href="#" class="page">3</a></li>
-								    <li><a href="#" class="page">4</a></li>
-								    <li><a href="#" class="page">5</a></li>
-								    <li><a href="#" class="page">74</a></li>
-								    <li><a href="#" class="page">125</a></li>
-								    <li><a href="#" class="page">1125</a></li>
-								    <li>
-								      <a href="#" aria-label="Next" class="next">
-								        <i class="fa fa-caret-right"></i>
-								      </a>
-								    </li>
-							 	</ul>
-							</div><!--end of Navigation-->
-						</div><!--end of Tools_block-->
-
-						<div class="tools_block clearfix">
-							<!--Radio-->
-							<div class="radio_block col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<h2>
-									Radio
-								</h2>
-								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-									<input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked />
-									<span class="mdl-radio__label">Radio1 Radio1 Radio1 Radio1 Radio1 Radio1 Radio1 </span>
-								</label>
-								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-									<input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2" />
-									<span class="mdl-radio__label">Radio2</span>
-								</label>
-							</div><!--end of Radio_block-->
-							
-							<!--Checkbox-->
-
-							<div class="checkbox_block col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<h2>
-									Checkbox
-								</h2>
-								<div class="checkboxes_block">
-									<input type="checkbox" id="check_1" name="check_1">
-									<label for="check_1"><p>CheckboxCheckboxCheckbox</p></label>
-									<input type="checkbox" id="check_2" name="check_2">
-									<label for="check_2"><p>Checkbox</p></label>
-									<input type="checkbox" id="check_3" name="check_3">
-									<label for="check_3"><p>Checkbox</p></label>
-								</div>
-							</div><!--end of Checkbox_block-->
-							
-							<!--Switch-->
-							<div class="switch col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<h2>
-									Toggles
-								</h2>
-								<div class="admin_round_onoffswitch">
-								    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-								    <label class="onoffswitch-label" for="myonoffswitch">
-								        <span class="onoffswitch-inner">
-								        </span>
-								        <span class="onoffswitch-switch">
-								        </span>
-								    </label>
-								</div>
-								<div class="admin_square_onoffswitch">
-								    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
-								    <label class="onoffswitch-label" for="myonoffswitch2">
-								        <span class="onoffswitch-inner">
-								        </span>
-								        <span class="onoffswitch-switch">
-								        </span>
-								    </label>
-								</div>
-							</div><!--end of Switch-->
-						</div><!--end of Tools_block-->
-
-						<div class="tools_block clearfix">
-							<div class="admin_tooltips col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<h2>
-									Tooltips
-								</h2>
-								<div class="admin_tooltip1">
-									<p class="text">
-										Tooltip under the text
-									</p>
-								</div>
-								<div>
-									<div class="admin_tooltip2">
-										<p class="text">
-											Here is the sample of talltooltip that contains three lines or more. More.
-										</p>
-									</div>
-								</div>
-							</div><!--end of Tooltips-->
-							<div class="admin_text_boxes col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<h2>
-									Text Box
-								</h2>	
-								<div class="text_box">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida a felis a lacinia. Pellentesque vel imperdiet urna. Vestibulum a ipsum ultrices, hendrerit est a, porta purus. Morbi sed faucibus dolor.
-										<a href="#">
-											visual marker.
-										</a>
-									</p>
-									<p>
-										Maecenas gravida a felis a lacinia. Pellentesque vel imperdiet urna. Vestibulum a ipsum ultrices, hendrerit est a, porta purus
-									</p>
-								</div><!--end of Text_box-->
-							</div><!--end of Text_boxes-->
-							<div class="headers col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<h2>
-									Headers
-								</h2>	
-								<h1>
-									Header 1
-								</h1>
-								<h2>
-									Header 2
-								</h2>
-								<h3>
-									Header 3
-								</h3>
-								<h4>
-									Header 4
-								</h4>
-								<h5>
-									Header 5
-								</h5>
-							</div>
-						</div><!--end of tools_block-->
-
-						<div class="tools_block">
-							<div class="admin_buttons">
-								<a class="button">
-									Warm Button
-								</a>
-							</div>
-						</div><!--end of Tools_block-->
-					</div><!--end of Right_part_main-->
-				</div><!--end of Index_inner-->
-	  		</main>
-
-			<footer >
-				<a href="http://www.dev.bzzz.biz.ua/">
-					made by
-					<img class="bzzz_logo" src="image/bzzz_logo.png" alt="bzzz! web development studio">
-				</a>
-			</footer>
+			<!--CONTENT IN RIGHT PART-->
+			<div class="container">
+				<h1 class="col-lg-12">
+					Элементы и их состояния
+				</h1>
+				<div class="tools_block clearfix">
+					<div class="admin_inputs clearfix">
+						<h2 class="col-lg-12">
+							Inputs
+						</h2>
+						<input class="admin_active_input col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2" />
+						<input class="admin_active_input col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-8 col-xs-offset-2" placeholder="Disabled" disabled/>
+						<input class="admin_alert_input col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-8 col-xs-offset-2" placeholder="Alert"/>
+					</div><!--end of Inputs-->
+				</div><!--end of Tools_block-->
 			
+				<div class="tools_block clearfix">
+					<div class="col-lg-6 col-md-6 sol-sm-6 col-xs-12">
+						<h2>
+							Progressbars and Sliders
+						</h2>
+						<!--Progressbar-->
+						<div class="progress">
+	  						<div class="progress-bar" role="progressbar"></div>
+						</div>
+						<!-- Slider-->
+						<div id="slider-range-min"></div>
+					</div><!--end of progress_sliders-->
+
+					<div class="admin_navigation clearfix col-lg-6 col-md-6 sol-sm-6 col-xs-12">
+						<h2>
+							Navigation
+						</h2>
+						<div class="clearfix">
+							<div class="admin_display_types">
+								<button class="first_type">
+									<i class="fa fa-align-justify"></i>
+								</button>
+								<button class="second_type">
+									<i class="fa fa-list"></i>
+								</button>
+								<button class="third_type">
+								</button>
+								<button class="fourth_type">
+									<i class="fa fa-th"></i>
+								</button>
+							</div>
+						</div >
+						<ul class="pager">
+							<li><a href="#"><i class="fa fa-caret-left"></i></a></li>
+							<li>All messages</li>
+							<li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+						</ul>
+						<ul class="pagination">
+						    <li>
+						      <a href="#" aria-label="Previous" class="prev">
+						        <i class="fa fa-caret-left"></i>
+						      </a>
+						    </li>
+						    <li><a href="#" class="page">1</a></li>
+						    <li><a href="#" class="page">2</a></li>
+						    <li><a href="#" class="page">3</a></li>
+						    <li><a href="#" class="page">74</a></li>
+						    <li><a href="#" class="page">125</a></li>
+						    <li><a href="#" class="page">1125</a></li>
+						    <li>
+						      <a href="#" aria-label="Next" class="next">
+						        <i class="fa fa-caret-right"></i>
+						      </a>
+						    </li>
+					 	</ul>
+					</div><!--end of Navigation-->
+				</div><!--end of Tools_block-->
+
+				<div class="tools_block clearfix">
+					<!--Radio-->
+					<div class="radio_block col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<h2>
+							Radio
+						</h2>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+							<input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked />
+							<span class="mdl-radio__label">Radio1 Radio1 Radio1 Radio1 Radio1 Radio1 Radio1 </span>
+						</label>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+							<input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2" />
+							<span class="mdl-radio__label">Radio2</span>
+						</label>
+					</div><!--end of Radio_block-->
+					
+					<!--Checkbox-->
+					<div class="checkbox_block col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<h2>
+							Checkbox
+						</h2>
+						<div class="checkboxes_block">
+							<input type="checkbox" id="check_1" name="check_1">
+							<label for="check_1"><p>CheckboxCheckboxCheckbox</p></label>
+							<input type="checkbox" id="check_2" name="check_2">
+							<label for="check_2"><p>Checkbox</p></label>
+							<input type="checkbox" id="check_3" name="check_3">
+							<label for="check_3"><p>Checkbox</p></label>
+						</div>
+					</div><!--end of Checkbox_block-->
+					
+					<!--Switch-->
+					<div class="switch col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<h2>
+							Toggles
+						</h2>
+						<div class="admin_round_onoffswitch">
+						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch">
+						        <span class="onoffswitch-inner">
+						        </span>
+						        <span class="onoffswitch-switch">
+						        </span>
+						    </label>
+						</div>
+						<div class="admin_square_onoffswitch">
+						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch2">
+						        <span class="onoffswitch-inner">
+						        </span>
+						        <span class="onoffswitch-switch">
+						        </span>
+						    </label>
+						</div>
+					</div><!--end of Switch-->
+				</div><!--end of Tools_block-->
+
+				<div class="tools_block clearfix">
+					<div class="admin_tooltips col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<h2>
+							Tooltips
+						</h2>
+						<div class="admin_tooltip1">
+							<p class="text">
+								Tooltip under the text.Tooltip under the text.Tooltip under the text.Tooltip under the text.Tooltip under the text.
+							</p>
+						</div>
+						<div>
+							<div class="admin_tooltip2">
+								<p class="text">
+									Here is the sample of talltooltip that contains three lines or more. More.Here is the sample of talltooltip that contains three lines or more. More.
+								</p>
+							</div>
+						</div>
+					</div><!--end of Admin_tooltips-->
+					<div class="admin_text_boxes col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<h2>
+							Text Box
+						</h2>	
+						<div class="text_box">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida a felis a lacinia. Pellentesque vel imperdiet urna. Vestibulum a ipsum ultrices, hendrerit est a, porta purus. Morbi sed faucibus dolor.
+								<a href="#">
+									visual marker.
+								</a>
+							</p>
+							<p>
+								Maecenas gravida a felis a lacinia. Pellentesque vel imperdiet urna. Vestibulum a ipsum ultrices, hendrerit est a, porta purus
+							</p>
+						</div><!--end of Text_box-->
+					</div><!--end of Text_boxes-->
+					<div class="headers col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<h2>
+							Headers
+						</h2>	
+						<h1>
+							Header 1
+						</h1>
+						<h2>
+							Header 2
+						</h2>
+						<h3>
+							Header 3
+						</h3>
+						<h4>
+							Header 4
+						</h4>
+						<h5>
+							Header 5
+						</h5>
+					</div>
+				</div><!--end of tools_block-->
+
+				<div class="tools_block">
+					<a class="button">
+						Warm Button
+					</a>
+				</div><!--end of Tools_block-->
+			</div><!--end of Container-->
+
 			<!--SCROLL UP-->
-			<!-- <div class="arrow">
-				<a id="scrollUp" href="#admin_header" class="back-to-top" style="display: inline;">
+			<div class="arrow">
+				<a id="scrollUp" href="#header" class="back-to-top" style="display: inline;">
 					<i class="fa fa-angle-up"></i>
 				</a>
-			</div> -->
-		</div><!--end of Mdl-layout-->
+			</div>
+		</div><!--end of Content-->
+			
+		<footer >
+			<a href="http://www.dev.bzzz.biz.ua/">
+				made by
+				<img class="bzzz_logo" src="image/bzzz_logo.png" alt="bzzz! web development studio">
+			</a>
+		</footer>
 	</body>
 </html>

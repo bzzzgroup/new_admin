@@ -1,70 +1,78 @@
 header	{
 	@include box-shadow (0px, 7px, 9px, 0px, $shadow);
 	width: 100%;
-	position: absolute;
-	top: 0;
 	background: $main_color;
+	height: 74px;
 	z-index: 7;
+	line-height: 74px;
 	color: $header_and_buttons_text;
+	a,
+	&:hover,
+	&:active {
+		color: $header_and_buttons_text !important;
+	}
 	.left_part_header {
 		float: left;
 		label {
 			font-size: 24px;
 			float: left;
-			margin: 30px 50px 25px 30px;
+			margin: 0px 50px 0px 35px;
 		}
 		#menuToggle {
 			display: none;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			@include user_select();
 		}
 		.company_name {
+			line-height: 74px;
 			float: left;
 			font-size: 30px;
-			margin: 25px 0px 20px 0px;
-			color: $header_and_buttons_text;
-			font-weight: 100;
+			margin: 0! important;
 			a,
 			&:hover,
 			&:active {
-				color: $header_and_buttons_text !important;
 				text-decoration: none;
+				font-weight: 300;
 			}
 		}
 	}
 	.right_part_header {
 		font-size: 14px;
-		font-style: normal !important;
-		font-weight: 500 !important;
 		float: right;
 		a {
-			color: #fff;
 			&:hover {
 				text-decoration: underline;
-				color: #fff;
+				background: none;
 			}
 		}
 		.fa-external-link {
+			line-height: 74px;
 			font-size: 24px;
-			margin: 16px 20px 0px 0px;
 			float: left;
+			margin-right: 20px;
 		}
 		.go_to {
-			margin: 10px 30px 0px 0px;
+			margin-right: 38px;
 			float: left;
 		}
 		.fa-user {
+			line-height: 74px;
 			font-size: 24px;
-			margin: 14px 20px 0px 0px;
+			margin-right: 20px;
 			float: left;
 		}
 		.hi {
-			margin: 11px 10px 0px 0px;
+			line-height: 74px;
 			float: left;
 			position: relative;
+			margin-right: 30px;
 			.to_log_out {
 				z-index: 20;
 				position: absolute;
-				top: 44px;
-				left: -84px;
+				top: 74px;
+				left: -83px;
 				background: $header_and_buttons_text;
 				width: 280px;
 				height: 55px;
@@ -85,20 +93,19 @@ header	{
 					color: $main_part_title;
 					float: left;
 					font-size: 23px;
-					margin: 12px 18px 3px 48px;
+					margin: 9px 22px 3px 26px;
 				}
 				.log_out {
 					color: $main_part_title;
 					float: left;
-					margin-top: 15px; 
+					line-height: 41px;
 				}
 			}
 			.fa-caret-down {
-				margin: 2px 30px 0px 10px;
-				position: relative;
-				bottom: 4px;
+				margin-left: 23px;
 				font-size: 24px;
-				float: right;
+				position: relative;
+				top: 4px;
 			}
 			.menu-icon {
 				padding: 31px 40px 15px 25px;
@@ -110,17 +117,8 @@ header	{
 		}
 	}
 }
-.mdl-layout__header {
-	background: $main_color;
-	position: static !important;
-}
-.mdl-layout__header,
-.mdl-layout__drawer-button {
-	z-index: 15;
-}
-.mdl-layout__drawer-button {
-	margin: 10px 17px;
-}
-.mdl-layout__container {
-	position: static;
+@media screen and (max-width: 900px) {
+  	.right_part_header {
+    	display: none;
+  	}
 }

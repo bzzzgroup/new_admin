@@ -1,252 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin</title>
+		<title>New Admin</title>
 		<meta name="viewport" content="width=1200, initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-
-		<link href='http://fonts.googleapis.com/css?family=Roboto:500,700,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-indigo.min.css"> 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">	
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
 
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	    <script src="js/arrow_up.js"></script>	
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	    <script src="js/drawer.js"></script>
 	    <script src="js/popup.js"></script>
+	    <script src="js/scroll_arrow.js"></script>
 	</head>
 	<body>
+		<header id="header">
+			<div class="left_part_header">
+				<input type="checkbox" id="menuToggle">
+				<label for="menuToggle" class="menu-icon">
+					&#9776;
+				</label>
+				<h1 class="company_name">
+					<a href="index.html">
+						company name
+					</a>
+				</h1>
+			</div><!--end of left part header-->
 
-		<!--CONTAINER WITH ALL BLOCKS-->
-		<div class="mdl-layout mdl-js-layout">
-			<!--HEADER-->
-	  		<header class="mdl-layout__header">
-	    		<div class="mdl-layout-icon"></div>
-	    		<div class="mdl-layout__header-row">
-	      			<span class="mdl-layout-title">Company name</span>
-	      			<div class="mdl-layout-spacer"></div>
-		      		<nav class="mdl-navigation">
-						<div class="right_part_header">
-							<span>
-								<i class="fa fa-external-link"></i>
-							</span>
-							<span class="go_to">
-								<a href="#">
-									Перейти на www.web.com
-								</a>
-							</span>
-							<span>	
-								<i class="fa fa-user"></i>
-							</span>
-							<div class="hi dropdown clearfix">
-								<a href="#" class="clearfix dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									Привет, admin_name
-									<span>
-										<i class="fa fa-caret-down"></i>
-									</span>
-								</a>
-								<ul class="to_log_out dropdown-menu" aria-labelledby="dropdownMenu1">
-									<li>
-										<a href="login.html" id="login">
-											<span>
-												<i class="fa fa-sign-out"></i>
-											</span>
-											<span class="log_out">
-												Выйти
-											</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div><!--end of Right part header-->
-		     		</nav>
-	    		</div><!--end of Mdl-layout__header-row-->
-	  		</header>
-	
-			<!--DRAWER-->
-			<div class="mdl-layout__drawer">
-			    <nav class="mdl-navigation ">
-				    <ul class="admin_menu">
-						<li class="first_li active">
-							<a href="#">
-								<img src="image/Exterior-100_sm.png" alt="main page" class="nav_picture">
-								главная
-							</a>
-						</li>
+			<div class="right_part_header">
+				<span>
+					<i class="fa fa-external-link"></i>
+				</span>
+				<span class="go_to">
+					<a href="#">
+						Перейти на www.web.com
+					</a>
+				</span>
+				<span>	
+					<i class="fa fa-user"></i>
+				</span>
+				<div class="hi dropdown clearfix">
+					<a href="#" class="clearfix dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Привет, admin_name
+						<span>
+							<i class="fa fa-caret-down"></i>
+						</span>
+					</a>
+					<ul class="to_log_out dropdown-menu" aria-labelledby="dropdownMenu1">
 						<li>
-							<a href="#">
-								<img src="image/Shopping-Cart-100_sm.png" alt="to add product" class="nav_picture">
-								добавить товар
-							</a>
-						</li>
-						<li class="underlined_li clearfix nav_bottom_padding">
-							<a href="#">
-								<img src="image/Megaphone-100_sm.png" alt="to add news" class="nav_picture nav_picture_news">
-								добавить новость
-							</a>
-						</li>
-						<li class="nav_top_padding">
-							<a href="#">
-								<img src="image/Open-Folder-100_sm.png" alt="subcategories" class="nav_picture nav_picture_subcat">
-								подкатегории
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="image/Dossier-100_sm.png" alt="catalog" class="nav_picture nav_picture_catalog">
-								каталог
-							</a>
-						</li>
-						<li class="clearfix nav_bottom_padding">
-							<a href="#">
-								<img src="image/View-Details-100_sm.png" alt="list of news" class="nav_picture nav_picture_list">
-								список новостей
-							</a>
-						</li>
-						<li class="two_lines_li clearfix nav_top_padding nav_bottom_padding">
-							<a href="#">
-								<img src="image/Conference-100_sm.png" alt="manufacturers" class="nav_picture nav_picture_manuf">
-								производители
+							<a href="login.html" id="login">
+								<span>
+									<i class="fa fa-sign-out"></i>
+								</span>
+								<span class="log_out">
+									Выйти
+								</span>
 							</a>
 						</li>
 					</ul>
-			    </nav>
-			</div><!--end of mdl-layout__drawer-->
+				</div>
+			</div><!--end of Right part header-->	
+		</header>
 
-			<!--MAIN CONTENT-->
-	  		<main class="mdl-layout__content">
-				<div class="index_inner container">
-					<div class="right_part_main">
-						<div class="categories_block clearfix">
-							<h1 class= "title_index col-lg-12">
-								Выберите страницу или категорию
-							</h1>
+		<!--DRAWER AND CONTENT IN RIGHT PART-->
+		<div class="content clearfix">
+			<!--DRAWER-->
+			<nav class="drawer">
+				<ul>
+					<li class="first_li active">
+						<a href="#">
+							<img src="image/Exterior-100_sm.png" alt="main page" class="nav_picture">
+							главная
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="image/Shopping-Cart-100_sm.png" alt="to add product" class="nav_picture">
+							добавить товар
+						</a>
+					</li>
+					<li class="underlined_li clearfix nav_bottom_padding">
+						<a href="#">
+							<img src="image/Megaphone-100_sm.png" alt="to add news" class="nav_picture nav_picture_news">
+							добавить новость
+						</a>
+					</li>
+					<li class="nav_top_padding">
+						<a href="#">
+							<img src="image/Open-Folder-100_sm.png" alt="subcategories" class="nav_picture nav_picture_subcat">
+							подкатегории
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="image/Dossier-100_sm.png" alt="catalog" class="nav_picture nav_picture_catalog">
+							каталог
+						</a>
+					</li>
+					<li class="clearfix nav_bottom_padding">
+						<a href="#">
+							<img src="image/View-Details-100_sm.png" alt="list of news" class="nav_picture nav_picture_list">
+							список новостей
+						</a>
+					</li>
+					<li class="two_lines_li clearfix nav_top_padding nav_bottom_padding">
+						<a href="#">
+							<img src="image/Conference-100_sm.png" alt="manufacturers" class="nav_picture nav_picture_manuf">
+							производители
+						</a>
+					</li>
+				</ul>
+		    </nav><!--end of Drawer-->
 
-							<!--one categiry-->
-							<div class="select_category col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
-								<div class="category_wrap">
-									<div class="img_div">
-										<img src="image/Shopping-Cart-100.png" alt="to add product">
-									</div>
-									<p>
-										Добавить товар
-									</p>
-									<a href="#" class="button but_category">
-										Перейти
-									</a>
-								</div>
-							</div><!--end of one category-->
+			<!--CONTENT IN RIGHT PART-->
+			<div class="container">
+				<div class="categories_block">
+					<h1 class= "col-lg-12">
+						Выберите страницу или категорию
+					</h1>
 
-							<!--one categiry-->
-							<div class="select_category col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
-								<div class="category_wrap">
-									<div class="img_div">
-										<img src="image/Megaphone-100.png" alt="to add news">
-									</div>
-									<p>
-										Добавить новость
-									</p>
-									<a href="#" class="button but_category">
-										Перейти
-									</a>
-								</div>
-							</div><!--end of one category-->
+					<!--one categiry-->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
+						<div class="category">
+							<div class="img_div">
+								<img src="image/Shopping-Cart-100.png" alt="to add product">
+							</div>
+							<p>
+								Добавить товар
+							</p>
+							<a href="#" class="button btn_category">
+								Перейти
+							</a>
+						</div>
+					</div><!--end of one category-->
 
-							<!--one categiry-->
-							<div class="select_category col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
-								<div class="category_wrap">
-									<div class="img_div">
-										<img src="image/Open-Folder-100.png" alt="subcategories">
-									</div>
-									<p>
-										Подкритерии
-									</p>
-									<a href="#" class="button but_category">
-										Перейти
-									</a>
-								</div>
-							</div><!--end of one category-->
+					<!--one categiry-->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
+						<div class="category">
+							<div class="img_div">
+								<img src="image/Megaphone-100.png" alt="to add news">
+							</div>
+							<p>
+								Добавить новость
+							</p>
+							<a href="#" class="button btn_category">
+								Перейти
+							</a>
+						</div>
+					</div><!--end of one category-->
 
-							<!--one categiry-->
-							<div class="select_category col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
-								<div class="category_wrap">
-									<div class="img_div">
-										<img src="image/Dossier-100.png" alt="catalog">
-									</div>
-									<p>
-										Каталог
-									</p>
-									<a href="#" class="button but_category">
-										Перейти
-									</a>
-								</div>
-							</div><!--end of one category-->
-						</div><!--end of categories_block-->
+					<!--one categiry-->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
+						<div class="category">
+							<div class="img_div">
+								<img src="image/Open-Folder-100.png" alt="subcategories">
+							</div>
+							<p>
+								Подкритерии
+							</p>
+							<a href="#" class="button btn_category">
+								Перейти
+							</a>
+						</div>
+					</div><!--end of one category-->
 
-						<div class="support_block clearfix">
-							<h1 class="title_index col-lg-12">
-								Дополнительная поддержка
-							</h1>
-							<!--one support_item-->
-							<div class="support col-lg-4 col-sm-4 col-xs-12">
-								<div class="support_img_div">
-									<img class="support_img support_first_img" src="image/Document-100.png" alt="instruction">
-								</div>
-								<a href="#" class="button but_support">
-									Загрузить
-								</a>
-								<p class="support_text">
-									Загрузить инструкцию по использованию данной админ панели
-								</p>
-							</div><!--end of one item-->
+					<!--one categiry-->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 clearfix">
+						<div class="category">
+							<div class="img_div">
+								<img src="image/Dossier-100.png" alt="catalog">
+							</div>
+							<p>
+								Каталог
+							</p>
+							<a href="#" class="button btn_category">
+								Перейти
+							</a>
+						</div>
+					</div><!--end of one category-->
+				</div><!--end of categories_block-->
 
-							<!--one support_item-->
-							<div class="support col-lg-4 col-sm-4 col-xs-12">
-								<div class="support_img_div">
-									<img class="support_img" src="image/Assistant-100.png" alt="instruction">
-								</div>
-								<a href="#" class="button but_support">
-									Связаться с нами
-								</a>
-								<p class="support_text">
-									Описание действия, которое необходимо выполнить
-								</p>
-							</div><!--end of one item-->
+				<div class="support_block clearfix">
+					<h1 class="col-lg-12">
+						Дополнительная поддержка
+					</h1>
+					<!--one support_item-->
+					<div class="support col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="support_img_div">
+							<img class="support_img" src="image/Document-100.png" alt="instruction">
+						</div>
+						<a href="#" class="button btn_support">
+							Загрузить
+						</a>
+						<p class="support_text">
+							Загрузить инструкцию по использованию данной админ панели
+						</p>
+					</div><!--end of one item-->
 
-							<!--one support_item-->
-							<div class="support col-lg-4 col-sm-4 col-xs-12">
-								<div class="support_img_div">
-									<img class="support_img" src="image/Conference-100.png" alt="instruction">
-								</div>
-								<a href="#" class="button but_support">
-									Действие
-								</a>
-								<p class="support_text">
-									Текст описывающий действие, которое необходимо выполнить
-								</p>
-							</div><!--end of one item-->
-						</div><!--end of Support block-->
-					</div><!--end of Right_part_main-->
-				</div><!--end of Index_inner-->
-	  		</main>
+					<!--one support_item-->
+					<div class="support col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="support_img_div">
+							<img class="support_img" src="image/Assistant-100.png" alt="instruction">
+						</div>
+						<a href="#" class="button btn_support">
+							Связаться с нами
+						</a>
+						<p class="support_text">
+							Описание действия, которое необходимо выполнить
+						</p>
+					</div><!--end of one item-->
 
-			<footer >
-				<a href="http://www.dev.bzzz.biz.ua/">
-					made by
-					<img class="bzzz_logo" src="image/bzzz_logo.png" alt="bzzz! web development studio">
-				</a>
-			</footer>
-			
+					<!--one support_item-->
+					<div class="support col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="support_img_div">
+							<img class="support_img" src="image/Conference-100.png" alt="instruction">
+						</div>
+						<a href="#" class="button btn_support">
+							Действие
+						</a>
+						<p class="support_text">
+							Текст описывающий действие, которое необходимо выполнить
+						</p>
+					</div><!--end of one item-->
+				</div><!--end of Support block-->
+			</div><!--end of Container-->
+
 			<!--SCROLL UP-->
-			<!-- <div class="arrow">
-				<a id="scrollUp" href="#admin_header" class="back-to-top" style="display: inline;">
+			<div class="arrow">
+				<a id="scrollUp" href="#header" class="back-to-top" style="display: inline;">
 					<i class="fa fa-angle-up"></i>
 				</a>
-			</div> -->
-		</div><!--end of Mdl-layout-->
+			</div>
+		</div><!--end of Content-->
+		
+		<footer >
+			<a href="http://www.dev.bzzz.biz.ua/">
+				made by
+				<img class="bzzz_logo" src="image/bzzz_logo.png" alt="bzzz! web development studio">
+			</a>
+		</footer>
 	</body>
 </html>

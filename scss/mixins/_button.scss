@@ -12,14 +12,18 @@
 	margin-bottom: 20px;
 	outline: none;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: none !important;
 	&:hover {
 		background: $button_on_hover;
 		border: 1px solid $button_on_hover;
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 	&:active {
 		background: $more_dark_main_color;
-		border: 1px solid $more_dark_main_color;	
+		border: 1px solid $more_dark_main_color;
+		text-decoration: none !important;
+	}
+	&:focus {
+		text-decoration: none !important;
 	}
 }

@@ -1,0 +1,559 @@
+/*---------------
+    INPUTS
+----------------*/
+.admin_inputs {
+    input {
+        float: left;
+        border-radius: 6px;
+        padding: 10px 0px 7px 10px;
+        font-size: 14px;
+        outline: none;
+        margin-bottom: 20px;
+    }
+    .admin_active_input {
+        border: 2px solid #d5d9db;
+        background: #f6f8f8;
+        color: $to_add_item_text;
+        &:focus {
+            @include input_placeholder(#3d4a5d);
+            border: 2px solid #3498db;
+            background: #fff;
+            color: #3d4a5d;
+        }
+        &:disabled {
+            border: 2px solid $progress_bar_backgr;
+            background: $progress_bar_backgr;
+        }
+    }
+    .admin_alert_input {
+        border: 2px solid $alert_input_color;
+        background: #fff;
+        @include input_placeholder ($alert_input_color);
+        &:focus {
+            border: 2px solid $alert_input_color;
+            color: #3d4a5d;
+        }
+    }
+}
+
+/*------------------
+    PROGRESS_BAR
+-------------------*/
+.progress {
+    display: inline-block;
+    margin: 10px 0px 50px 0px;
+    border-radius: 10px;
+    width: 220px;
+    height: 12px;
+    background-color: $progress_bar_backgr;
+    .progress-bar {
+        width: 60%;
+        background-color: $main_color;
+    }
+}
+
+/*---------------
+    SLIDER
+----------------*/
+.ui-corner-all {
+    border-radius: 10px;
+}
+#slider-range-min {
+    margin: 10px 0px 0px 10px;
+    background-color: $progress_bar_backgr;
+    width: 220px;
+    height: 12px;
+    margin-bottom: 20px;
+}
+.ui-widget-header {
+    border: 1px solid $main_color !important;
+    background: $main_color;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid $more_dark_main_color;
+    background: $more_dark_main_color;
+    outline: none;
+    width: 18px;
+    height: 18px;
+}
+.ui-widget-content {
+    border: 1px solid $progress_bar_backgr;
+    background: $progress_bar_backgr;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -4px;
+}
+
+/*---------------
+    NAVIGATION
+----------------*/
+.admin_navigation {  
+    @include user_select();              
+    a {
+        text-decoration: none;
+    }
+    .navig_title {
+        margin-left: 30px;
+    }
+    .admin_display_types {
+        margin-bottom: 30px;
+        display: inline-block;
+        float: left;
+        position: relative;
+        button {
+            background: $main_color;
+            border: 1px solid $main_color;
+            width: 45px;
+            height: 40px;
+            outline: none;
+            font-size: 17px;
+            color: $header_and_buttons_text;
+            &:hover {
+                background: $more_dark_main_color;
+                border: 1px solid $more_dark_main_color;
+            }
+        } 
+        .first_type {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px; 
+            position: relative;
+        }
+        .second_type {
+            position: relative;
+            right: 4px;
+        }
+        .third_type {
+            background: $main_color url('../image/display_type.png') no-repeat center center;
+            position: absolute;
+            right: -41px;
+            bottom: 0px;
+            &:hover {
+                background: $more_dark_main_color url('../image/display_type.png') no-repeat center center;
+            }
+            .third_type_img {
+                width: 22px;
+                height: 20px;
+                position: relative;
+                top: 1px;
+            }
+        }
+        .fourth_type {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            position: absolute;
+            right: -86px;
+            bottom: 0px;
+        }
+    }
+    .pager {
+        display: table-cell;
+        background: $main_color;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        li {
+            &:nth-child(1) {
+                a {
+                    border-right: 1px solid $more_dark_main_color;
+                }
+            }
+            &:nth-child(2) {
+                padding: 7px 20px;
+                position: relative;
+                bottom: 3px;
+            }
+            &:nth-child(3) {
+                a {
+                    border-left: 1px solid $more_dark_main_color;
+                }
+            }
+        }
+        .fa {
+            font-size: 28px;
+            color: #fff;
+        }
+        a {
+            background-color: $main_color;
+            border: none;
+            border-radius: 4px;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $more_dark_main_color;
+            }
+        }
+    }
+    .pagination {
+        width: 335px;
+        padding-top: 10px;
+        margin: 29px 0 0 0;
+        display: inline-block;
+        background-color: #d7dbdd;
+        li {
+            margin-top: 10px;
+            &:first-child,
+            &:last-child {
+                a {
+                    border-radius: 0px !important;
+                    padding: 0px 15px;
+                    &:hover,
+                    &:focus {
+                        background: transparent;
+                        padding: 0px 15px;
+                        bottom: 0;
+                    }
+                }
+            }
+            a {
+                color: #d7dbdd;
+                font-size: 12px;
+                margin: 0px 5px;
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background: $main_color;
+                    padding: 1px 15px;
+                }
+            }
+        }
+        .prev, .next {
+            background: $progress_bar_backgr;
+            &:hover {
+                background: $main_color;
+            }
+        }
+        .fa-caret-right,
+        .fa-caret-left {
+            color: #fff;
+            font-size: 28px;
+            position: relative;
+            bottom: 5px;
+            &:hover,
+            &:focus {
+                color: $main_color;
+            }
+        }
+    }
+}
+.page {
+    border-radius: 50%;
+    padding: 0px 6px !important;
+    &:hover,
+    &:focus {
+        padding: 1px 6px !important;
+        position: relative;
+        bottom: 1px;
+    }
+}
+.page_2_numbers {
+    border-radius: 30px;
+    padding: 1px 6px !important;
+}
+
+/*-------------------
+    CHECKBOX_RADIO
+---------------------*/
+.radio_block,
+.checkbox_block {
+    width: 200px;
+    margin-right: 30px;
+    float: left;
+}
+.checkbox_block label,
+.radio_block label {
+    margin-bottom: 12px;
+}
+.radio_block {
+    label {
+        display: block;
+        font-weight: 400;
+    }
+}
+.mdl-radio {
+    font-size: 14px;
+    color: $main_part_title;
+}
+.mdl-checkbox__box-outline {
+    /*background: $progress_bar_backgr;*/
+    border: 2px solid $progress_bar_backgr;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+.mdl-radio__outer-circle {
+    width: 18px;
+    height: 18px;
+    border: 3px solid $main_color !important;
+}
+.mdl-radio__inner-circle  {
+    top: 10px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    background: $main_color;
+}
+.checkboxes_block {
+    width: 130px;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 16px !important;
+    input[type="checkbox"] {
+        display: none;
+        &+label {
+            display: block;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 5px; 
+            position: relative;
+            color: $main_part_title;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            background: $progress_bar_backgr;
+            &:before {
+                position: absolute;
+                top: 5px;
+                left: 4px;
+                content:"a";
+                color: transparent;
+                width: 11px;
+                height: 7px;
+                @include rotate(-45deg);
+            }
+            &:hover {
+                &::before {
+                    border-left: 2px solid rgba(255,255,255,.5);
+                    border-bottom: 2px solid rgba(255,255,255,.5);  
+                }
+            }
+            p {
+                margin-left: 34px;
+            }
+        }
+        &:checked {
+            &+label {
+                background: $main_color;
+                &:before    {
+                    border-left: 2px solid rgba(255,255,255,1);
+                    border-bottom: 2px solid rgba(255,255,255,1);
+                }
+            }
+        }
+    }
+    input[type=checkbox][disabled] {
+        &+label {
+            &:hover {
+                &::before {
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+}
+
+/*---------------
+    SWITCH
+----------------*/
+.switch {
+    @include user_select();
+    label{
+        margin: 0;
+    }              
+    .navig_title {
+        margin-left: 0px;
+    }
+    .admin_round_onoffswitch {
+        float: left;
+        position: relative;
+        width: 80px;
+    }
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid $switch_backgr;
+        border-radius: 18px;
+    }
+    .onoffswitch-inner {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 28px;
+        padding: 0;
+        line-height: 28px;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "ON";
+        padding-left: 17px;
+        background-color: $switch_backgr;
+        color: $main_color;
+    }
+    .onoffswitch-inner:after {
+        content: "OFF";
+        padding-right: 14px;
+        background-color: $switch_backgr;
+        color: #fff;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block;
+        width: 28px;
+        margin: 2px;
+        background: $footer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 48px;
+        border: 2px solid $switch_backgr;
+        border-radius: 18px;
+        @include transition(all, 0.3s, ease-in, 0s); 
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px; 
+        background-color: $main_color; 
+    }
+}
+.admin_square_onoffswitch {
+    @extend .admin_round_onoffswitch;
+    .onoffswitch-inner:before {
+        content: url(../image/checked.png);
+    }
+    .onoffswitch-inner:after {
+        content: url(../image/unchecked.png);
+    }
+    .onoffswitch-switch {
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        border-radius: 6px 0px 0px 6px;
+        left: -3px;
+        width: 32px;
+        border: 1px solid $switch_backgr !important;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        left: 44px;
+        right: 0px; 
+        border-radius: 0px 6px 6px 0px;
+        border: 1px solid $main_color;
+    }
+    .onoffswitch-label {
+        border-radius: 6px;
+        width: 78px;
+        position: absolute;
+    }
+}
+.admin_round_onoffswitch {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/*---------------
+    TOOLTIPS
+----------------*/
+.admin_tooltips {
+    float: left;
+    .navig_title {
+        margin: 0px 0px 35px 0px;
+        display: inline-block;
+        float: left;
+    }
+    clear: both;
+    .admin_tooltip1 {
+        clear: both;
+        @include tooltip1(-8px);
+    }
+    .admin_tooltip2 {
+        clear: both;
+        display: block;
+        @include tooltip2(-9px);
+        margin-top: 30px;
+    }
+}
+
+/*---------------
+    TEXT_BOX
+----------------*/
+.admin_text_boxes {
+    float: left;
+    .navig_title {
+         margin-left: 0;
+    }
+    .text_box {
+        width: 285px;
+        font-size: 14px;
+        line-height: 18px;
+        color: $main_part_title;
+        text-align: left;
+        a, a:hover, a:focus, a:active {
+            color: $main_color;
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+/*------------------
+       HEADERS
+-------------------*/
+h1 {
+    color: $main_part_title;
+    font-size: 32px;
+    margin: 40px 0px;
+    font-weight: 300;
+}
+h2 {
+    color: $main_part_title;
+    font-size: 26px;
+    margin-bottom: 30px; 
+    font-style: normal;
+    font-weight: 500;
+}
+h3 {
+    color: $main_part_title;
+    font-size: 24px;
+    font-weight: bold;
+}
+h4 {
+    color: $main_part_title;
+    font-size: 18px;
+    font-weight: bold;
+}
+h5 {
+    color: $main_part_title;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.headers {
+    float: left;
+    h1 {
+        margin: 30px 0px 20px 0px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    h3, h4 {
+        margin-bottom: 18px;
+    }
+}
