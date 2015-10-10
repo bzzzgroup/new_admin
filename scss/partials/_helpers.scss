@@ -340,14 +340,8 @@
             }
         }
     }
-    input[type=checkbox][disabled] {
-        &+label {
-            &:hover {
-                &::before {
-                    border: 1px solid transparent;
-                }
-            }
-        }
+    input[type=checkbox][disabled]+label:hover::before {
+        border: 1px solid transparent;
     }
 }
 
